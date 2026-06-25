@@ -70,7 +70,7 @@ export default function AboutSection() {
             <div className="relative z-10 overflow-hidden bg-charcoal aspect-[4/5] shadow-xl rounded-sm border border-gray-100">
               <Image
                 src="/images/about_manufacturing_floor.png"
-                alt="India Royale Industries warehouse operations"
+                alt="Royale Industries warehouse operations"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover zoom-on-hover"
@@ -95,7 +95,7 @@ export default function AboutSection() {
                 Immense Expertise in Plastic Raw Materials
               </h2>
               <p className="text-gray-500 font-sans leading-relaxed text-base">
-                Established in 2004, India Royale Industries has gained immense expertise in supplying and trading high-quality plastic raw materials: PVC granules, PE granules, EVA granules, and more. Located in Delhi, Delhi, we are recognized as one of the leading sellers of listed polymer products.
+                Established in 2004, Royale Industries has gained immense expertise in supplying and trading high-quality plastic raw materials: PVC granules, PE granules, EVA granules, and more. Located in Delhi, Delhi, we are recognized as one of the leading sellers of listed polymer products.
               </p>
               <p className="text-gray-500 font-sans leading-relaxed text-base">
                 Our business operates as a trusted Importer and Supplier, focused on delivering the best quality products and services to manufacturers who buy plastic raw materials in bulk. With a specialized team of two industry experts, we provide reliable, personalized, and efficient long-term supply partnerships.

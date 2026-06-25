@@ -48,7 +48,7 @@ export default function QASection() {
         <SectionHeader
           tag="Zero-Defect Commitment"
           title="Quality Assurance & Sourcing Standards"
-          description="As a trusted importer and supplier, India Royale Industries ensures that every shipment of PVC, PE, and EVA granules meets strict quality controls and chemical safety standards."
+          description="As a trusted importer and supplier, Royale Industries ensures that every shipment of PVC, PE, and EVA granules meets strict quality controls and chemical safety standards."
           lightBg={true}
         />
 

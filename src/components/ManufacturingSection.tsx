@@ -70,7 +70,7 @@ export default function ManufacturingSection() {
         <SectionHeader
           tag="Our Workflow"
           title="Supply Chain & Import Sourcing Workflow"
-          description="From global petrochemical sourcing to local bulk delivery in Delhi, India Royale Industries manages a secure, professional supply chain to ensure product quality."
+          description="From global petrochemical sourcing to local bulk delivery in Delhi, Royale Industries manages a secure, professional supply chain to ensure product quality."
           lightBg={false}
         />
 

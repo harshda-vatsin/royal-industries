@@ -89,7 +89,7 @@ export default function Navbar() {
                   ROYALE INDUSTRIES
                 </span>
                 <span className="text-[9px] font-semibold tracking-widest text-brand-red uppercase mt-0.5">
-                  India Royale Industries
+                  Royale Industries
                 </span>
               </div>
             </Link>

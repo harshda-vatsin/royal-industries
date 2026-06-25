@@ -6,7 +6,7 @@ import { Shield, Globe, Award, Warehouse, Headphones, Zap } from 'lucide-react';
 const CARDS = [
   {
     title: 'Immense Sourcing Expertise',
-    description: 'Established in 2004, India Royale Industries has spent over 20 years developing a trusted network of global polymer manufacturers.',
+    description: 'Established in 2004, Royale Industries has spent over 20 years developing a trusted network of global polymer manufacturers.',
     icon: Award,
   },
   {
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         <SectionHeader
           tag="Why Partner With Us"
           title="The Royale Industry Advantage"
-          description="Industrial buyers and manufacturing firms select India Royale Industries for our exceptional service, bulk supply consistency, and verified polymer quality."
+          description="Industrial buyers and manufacturing firms select Royale Industries for our exceptional service, bulk supply consistency, and verified polymer quality."
           lightBg={false}
         />
 

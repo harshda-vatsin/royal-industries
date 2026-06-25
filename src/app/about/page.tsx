@@ -9,7 +9,7 @@ const TIMELINE = [
   {
     year: '2004',
     title: 'Company Foundation',
-    description: 'India Royale Industries was established in Delhi, Delhi, focusing on high-quality supplying and trading of plastic raw materials including PVC, PE, and EVA granules.',
+    description: 'Royale Industries was established in Delhi, Delhi, focusing on high-quality supplying and trading of plastic raw materials including PVC, PE, and EVA granules.',
   },
   {
     year: '2012',
@@ -114,10 +114,10 @@ export default function AboutPage() {
         <section className="py-20 bg-lightgrey-light border-t border-b border-gray-200/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeader
-              tag="Corporate History"
-              title="A Legacy of Trust & Expertise"
-              description="Since 2004, India Royale Industries has supplied plastic raw materials to manufacturers in Delhi and across India. Explore our key milestones."
-              lightBg={true}
+              tag="Milestones & History"
+              title="Our Journey of Trust"
+              description="Since 2004, Royale Industries has supplied plastic raw materials to manufacturers in Delhi and across India. Explore our key milestones."
+              lightBg={false}
             />
 
             <div className="relative border-l border-gray-300 ml-4 md:ml-32 space-y-12 max-w-3xl md:mx-auto">
@@ -156,8 +156,8 @@ export default function AboutPage() {
             <h2 className="font-heading font-extrabold text-3xl text-charcoal tracking-tight leading-tight mb-6">
               A Highly Specialized Team of 2
             </h2>
-            <p className="text-gray-500 font-sans leading-relaxed text-base max-w-2xl mx-auto">
-              India Royale Industries maintains a lean, highly focused team of two polymer supply specialists. This allows us to maintain direct communication channels, eliminating administrative overhead and ensuring our clients receive immediate, personalized service for their bulk raw material orders.
+            <p className="text-gray-600 leading-relaxed font-sans mt-4 text-sm sm:text-base">
+              Royale Industries maintains a lean, highly focused team of two polymer supply specialists. This allows us to maintain direct communication channels, eliminating administrative overhead and ensuring our clients receive immediate, personalized service for their bulk raw material orders.
             </p>
           </div>
         </section>

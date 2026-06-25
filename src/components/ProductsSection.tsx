@@ -61,7 +61,7 @@ export default function ProductsSection() {
         <SectionHeader
           tag="Material Portfolio"
           title="Imported Bulk Plastic Raw Materials"
-          description="Buy premium PVC, PE, and EVA granules in bulk from India Royale Industries. We guarantee batch consistency, competitive pricing, and certified quality grades."
+          description="Buy premium PVC, PE, and EVA granules in bulk from Royale Industries. We guarantee batch consistency, competitive pricing, and certified quality grades."
           lightBg={true}
         />
 

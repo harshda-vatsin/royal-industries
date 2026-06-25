@@ -21,7 +21,7 @@ export default function PrivacyPage() {
               1. Information Collection and Use
             </h2>
             <p>
-              India Royale Industries collects contact details, corporate designations, and technical specifications submitted via our bulk RFQ forms. This data is utilized solely to process your material requests, formulate supply quotes, and coordinate freight shipments.
+              Royale Industries collects contact details, corporate designations, and technical specifications submitted via our bulk RFQ forms. This data is utilized solely to process your material requests, formulate supply quotes, and coordinate freight shipments.
             </p>
 
             <h2 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal tracking-tight pt-4">

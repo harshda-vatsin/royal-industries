@@ -21,14 +21,14 @@ export default function TermsPage() {
               1. Commercial Supply Agreements
             </h2>
             <p>
-              All quotations, bulk material supply contracts, and shipments coordinated by India Royale Industries are subject to our standard commercial terms. Specific billing terms, freight coordinates, and bulk discount schedules are finalized via signed sales agreements.
+              All quotations, bulk material supply contracts, and shipments coordinated by Royale Industries are subject to our standard commercial terms. Specific billing terms, freight coordinates, and bulk discount schedules are finalized via signed sales agreements.
             </p>
 
             <h2 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal tracking-tight pt-4">
               2. Material Quality and Tolerances
             </h2>
             <p>
-              Our polymer raw materials are guaranteed to conform to the physical, thermal, and mechanical ranges specified in our official Technical Datasheets (TDS) and manufacturer specifications. India Royale Industries is not liable for material failures resulting from improper processing on the client's manufacturing floor.
+              Our polymer raw materials are guaranteed to conform to the physical, thermal, and mechanical ranges specified in our official Technical Datasheets (TDS) and manufacturer specifications. Royale Industries is not liable for material failures resulting from improper processing on the client's manufacturing floor.
             </p>
 
             <h2 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal tracking-tight pt-4">

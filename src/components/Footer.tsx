@@ -26,12 +26,12 @@ export default function Footer() {
                   ROYALE INDUSTRIES
                 </span>
                 <span className="text-[9px] font-semibold tracking-widest text-brand-red uppercase mt-0.5">
-                  India Royale Industries
+                  Royale Industries
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Established in 2004, India Royale Industries has gained immense expertise in supplying and trading high-quality plastic raw materials: PVC granules, PE granules, EVA granules, and more in bulk. Sourced globally, located in Delhi, Delhi.
+            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed font-sans font-light">
+              Established in 2004, Royale Industries has gained immense expertise in supplying and trading high-quality plastic raw materials: PVC granules, PE granules, EVA granules, and more in bulk. Sourced globally, located in Delhi, Delhi.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" className="w-8 h-8 rounded-sm bg-charcoal-light flex items-center justify-center hover:bg-brand-red transition-colors duration-200" aria-label="LinkedIn">
@@ -155,7 +155,7 @@ export default function Footer() {
       <div className="bg-charcoal-dark border-t border-charcoal-light py-6 px-4 sm:px-6 lg:px-8 text-xs text-gray-500">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div>
-            <span>© 2026 India Royale Industries. All rights reserved.</span>
+            <span>© 2026 Royale Industries. All rights reserved.</span>
           </div>
           <div className="flex space-x-6">
             <Link href="/terms" className="hover:text-brand-red transition-colors">Terms of Service</Link>

@@ -34,7 +34,7 @@ export default function ContactCTA() {
               <span className="text-brand-red">Let's Connect Today.</span>
             </h2>
             <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-sans font-light">
-              Buy PVC granules, PE granules, and EVA granules in bulk from India Royale Industries for the best quality products, competitive wholesale pricing, and exceptional delivery service.
+              Buy PVC granules, PE granules, and EVA granules in bulk from Royale Industries for the best quality products, competitive wholesale pricing, and exceptional delivery service.
             </p>
           </div>
 

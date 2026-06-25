@@ -84,7 +84,7 @@ export default function RFQSection() {
               <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-40"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
                 <MapPin className="w-8 h-8 text-brand-red mb-2 group-hover:bounce transition-all duration-300" />
-                <span className="text-xs uppercase font-bold tracking-wider text-charcoal">India Royale Industries</span>
+                <span className="text-xs uppercase font-bold tracking-wider text-charcoal">Royale Industries</span>
                 <span className="text-xs text-gray-400 mt-1">Delhi, Delhi, India</span>
                 <a
                   href="https://maps.google.com"
