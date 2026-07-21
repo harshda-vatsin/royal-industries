@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-6">
             <Link href="/" className="flex items-center space-x-2 bg-white p-2 rounded-sm w-fit inline-block">
               <Image 
-                src="/logo.png" 
+                src="/logo_main.png" 
                 alt="Royale Resinex Logo" 
                 width={200} 
                 height={60} 

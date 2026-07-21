@@ -1,13 +1,102 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Lightbulb } from 'lucide-react';
+
+type QuoteData = { text: string; author: string };
+
+const FALLBACK_QUOTES: QuoteData[] = [
+  { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+  { text: "Quality is not an act, it is a habit.", author: "Aristotle" },
+  { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+  { text: "Strive not to be a success, but rather to be of value.", author: "Albert Einstein" },
+  { text: "Great things in business are never done by one person.", author: "Steve Jobs" },
+  { text: "If you don't drive your business, you will be driven out of business.", author: "B.C. Forbes" },
+  { text: "Don't find customers for your products, find products for your customers.", author: "Seth Godin" },
+  { text: "A satisfied customer is the best business strategy of all.", author: "Michael LeBoeuf" },
+  { text: "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.", author: "Colin Powell" },
+  { text: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" }
+];
 
 export default function HeroSection() {
+  const [quote, setQuote] = useState<QuoteData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchQuote = async () => {
+      try {
+        const today = new Date().toDateString();
+        const cachedQuoteStr = localStorage.getItem('dailyQuoteData');
+        const cachedDate = localStorage.getItem('dailyQuoteDate');
+
+        if (cachedQuoteStr && cachedDate === today) {
+          try {
+            const parsed = JSON.parse(cachedQuoteStr);
+            setQuote(parsed);
+            setIsLoading(false);
+            return;
+          } catch(e) {}
+        }
+
+        let quoteFound = false;
+
+        // 1. Try ZenQuotes via our internal API proxy to bypass CORS
+        try {
+          const res = await fetch('/api/quote');
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.length > 0) {
+              const newQuote = { text: data[0].q, author: data[0].a };
+              localStorage.setItem('dailyQuoteData', JSON.stringify(newQuote));
+              localStorage.setItem('dailyQuoteDate', today);
+              setQuote(newQuote);
+              quoteFound = true;
+            }
+          }
+        } catch (e) {
+          console.warn("ZenQuotes API failed", e);
+        }
+
+        // 2. Try Quotable API fallback
+        if (!quoteFound) {
+          try {
+            const res2 = await fetch('https://api.quotable.io/random?tags=business|success');
+            if (res2.ok) {
+              const data2 = await res2.json();
+              if (data2 && data2.content) {
+                const newQuote = { text: data2.content, author: data2.author };
+                localStorage.setItem('dailyQuoteData', JSON.stringify(newQuote));
+                localStorage.setItem('dailyQuoteDate', today);
+                setQuote(newQuote);
+                quoteFound = true;
+              }
+            }
+          } catch (e) {
+            console.warn("Quotable API failed", e);
+          }
+        }
+
+        // 3. Local Array Fallback
+        if (!quoteFound) {
+          const randomQuote = FALLBACK_QUOTES[Math.floor(Math.random() * FALLBACK_QUOTES.length)];
+          localStorage.setItem('dailyQuoteData', JSON.stringify(randomQuote));
+          localStorage.setItem('dailyQuoteDate', today);
+          setQuote(randomQuote);
+        }
+      } catch (err) {
+        setQuote(FALLBACK_QUOTES[0]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchQuote();
+  }, []);
+
   return (
-    <section className="relative w-full overflow-hidden bg-[#061a33] flex items-center min-h-[calc(100vh-110px)] py-8 sm:py-10 lg:py-14 snap-align-start">
+    <section className="relative w-full overflow-hidden bg-[#061a33] flex flex-col justify-center min-h-[calc(100vh-110px)] py-8 sm:py-10 lg:py-14 snap-align-start">
 
       {/* Background Video - kept sharp and photographic */}
       <div className="absolute inset-0 z-0">
@@ -36,11 +125,30 @@ export default function HeroSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative w-full px-4 sm:px-6 lg:px-8 z-10">
-        <div className="grid grid-cols-1 justify-items-start">
+      <div className="relative w-full px-4 sm:px-6 lg:px-8 z-10 flex flex-col items-center flex-grow justify-center mt-[-20px] sm:mt-0">
+        
+        {/* Thought of the Day Banner */}
+        <div className="w-[95%] md:w-[75%] lg:w-[55%] mx-auto mt-[-30px] lg:mt-[-50px] mb-2 flex items-center px-6 sm:px-10 transition-all duration-250 animate-fade-in-up self-start sm:self-center group cursor-default">
+          {isLoading ? (
+            <span className="text-white/70 text-[13px] sm:text-sm font-sans tracking-wide w-full text-center">Loading today's thought...</span>
+          ) : (
+            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full space-y-2 sm:space-y-0 sm:space-x-4">
+              <div className="flex-grow flex flex-col justify-center">
+                <span className="text-sm sm:text-base leading-relaxed tracking-wide">
+                  <span className="text-white font-medium">"{quote?.text}"</span>
+                </span>
+                <span className="block text-right text-[13px] sm:text-sm italic text-gray-300 mt-1 sm:mt-1.5 w-full">
+                  {quote?.author}
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="w-full grid grid-cols-1 justify-items-start">
 
           {/* Left Column: B2B Sourcing Narrative */}
-          <div className="w-full max-w-3xl lg:max-w-5xl mx-0 flex flex-col text-left items-start animate-fade-in-up">
+          <div className="w-full max-w-3xl lg:max-w-5xl mx-0 flex flex-col text-left items-start animate-fade-in-up mt-6 sm:mt-8 lg:mt-12">
 
             {/* Main Heading */}
             <h1 className="font-sans font-extrabold text-3xl sm:text-4xl lg:text-6xl text-[#F8FAFC] tracking-tight leading-[1.15]">
@@ -101,3 +209,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

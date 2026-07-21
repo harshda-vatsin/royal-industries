@@ -91,7 +91,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <Image 
-                src="/logo.png" 
+                src="/logo_main.png" 
                 alt="Royale Resinex Logo" 
                 width={240} 
                 height={80} 
