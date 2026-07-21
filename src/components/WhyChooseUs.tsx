@@ -1,50 +1,52 @@
 'use client';
 
 import SectionHeader from './SectionHeader';
+import ScrollPop from './ScrollPop';
 import { Shield, Globe, Award, Warehouse, Headphones, Zap } from 'lucide-react';
 
 const CARDS = [
   {
     title: 'Immense Sourcing Expertise',
-    description: 'Established in 2004, Royale Industries has spent over 20 years developing a trusted network of global polymer manufacturers.',
+    description: 'Established in May 2004, Royale Industries has spent over 20 years developing a trusted sourcing network of global polymer producers.',
     icon: Award,
   },
   {
     title: 'Bulk Supply Capability',
-    description: 'We specialize in bulk shipments, maintaining consistent inventory levels to support uninterrupted production runs for our clients.',
+    description: 'We specialize in bulk shipments, maintaining consistent inventory levels to support uninterrupted operations for our B2B clients.',
     icon: Warehouse,
   },
   {
     title: 'Premium Quality Materials',
-    description: 'Every batch of PVC, PE, and EVA granules is imported from leading global producers and verified for physical and chemical consistency.',
+    description: 'We supply a wide variety of polymer grades from leading global producers, ensuring standard supplier documentation and traceabilities.',
     icon: Shield,
   },
   {
-    title: 'Strategic Import Sourcing',
-    description: 'Our strong relationships with petrochemical refineries allow us to import specialized polymer grades directly to India.',
+    title: 'Custom Grade Sourcing',
+    description: 'Can\'t find the exact grade? Our extensive network allows us to identify and source customized grades tailored to specific processing requirements.',
     icon: Globe,
   },
   {
-    title: 'Delhi-Based Supply Hub',
-    description: 'Located in Delhi, Delhi, our central storage warehouse ensures efficient local logistics and fast transport coordination.',
+    title: 'Global Sourcing & Fast Delivery',
+    description: 'We import from almost every part of the world and coordinate nationwide transport, ensuring contingency delivery within 24 hours to support your operations.',
     icon: Zap,
   },
   {
-    title: 'Specialized Customer Service',
-    description: 'With a dedicated expert team of two, we offer highly personalized support, ensuring direct communication and rapid response times.',
+    title: 'Responsive B2B Service',
+    description: 'Driven by a team of approximately 15 employees, we offer personal support, technical understanding, and fast RFQ turnarounds.',
     icon: Headphones,
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white border-b border-gray-100" id="why-choose-us">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ScrollPop>
+    <section className="py-24 lg:py-16 bg-white border-b border-gray-100 snap-align-start" id="why-choose-us">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         
         <SectionHeader
           tag="Why Partner With Us"
           title="The Royale Industry Advantage"
-          description="Industrial buyers and manufacturing firms select Royale Industries for our exceptional service, bulk supply consistency, and verified polymer quality."
+          description="Industrial buyers and manufacturing firms partner with Royale Industries for our sourcing expertise, bulk supply consistency, and PAN India delivery support."
           lightBg={false}
         />
 
@@ -55,10 +57,10 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={idx}
-                className="group bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-md hover:border-brand-red transition-all duration-300 flex flex-col space-y-4"
+                className="group bg-white border border-gray-200 p-8 rounded-sm shadow-sm hover:shadow-md hover:border-brand-blue transition-all duration-300 flex flex-col space-y-4"
               >
                 {/* Icon Container */}
-                <div className="w-12 h-12 rounded-sm bg-brand-red/5 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                <div className="w-12 h-12 rounded-sm bg-brand-blue/5 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
                   <Icon className="w-6 h-6" />
                 </div>
 
@@ -78,5 +80,6 @@ export default function WhyChooseUs() {
 
       </div>
     </section>
+    </ScrollPop>
   );
 }

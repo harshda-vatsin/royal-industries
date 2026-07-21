@@ -28,7 +28,7 @@ export default function TermsPage() {
               2. Material Quality and Tolerances
             </h2>
             <p>
-              Our polymer raw materials are guaranteed to conform to the physical, thermal, and mechanical ranges specified in our official Technical Datasheets (TDS) and manufacturer specifications. Royale Industries is not liable for material failures resulting from improper processing on the client's manufacturing floor.
+              Our polymer raw materials are guaranteed to conform to the physical, thermal, and mechanical ranges specified in our official Technical Datasheets (TDS) and manufacturer specifications. Royale Industries is not liable for material failures resulting from improper processing on the client&apos;s manufacturing floor.
             </p>
 
             <h2 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal tracking-tight pt-4">

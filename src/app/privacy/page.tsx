@@ -35,14 +35,14 @@ export default function PrivacyPage() {
               3. Regulatory Compliance
             </h2>
             <p>
-              Our data-retention policies conform with international commerce regulations, including REACH and RoHS chemical disclosures, ensuring complete transparency in chemicals and material sourcing records.
+              Our data-retention policies conform with standard B2B commerce guidelines, enabling us to track and supply supplier-provided safety records and chemical declarations.
             </p>
 
             <h2 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal tracking-tight pt-4">
               4. Contact Us
             </h2>
             <p>
-              For inquiries regarding material compliance records or data requests, please contact our Delhi offices at <a href="mailto:info@indiaroyale.com" className="text-brand-red hover:underline font-semibold">info@indiaroyale.com</a>.
+              For inquiries regarding material compliance records or data requests, please contact our New Delhi offices at <a href="mailto:info@indiaroyale.com" className="text-brand-blue hover:underline font-semibold">info@indiaroyale.com</a>.
             </p>
           </div>
         </div>

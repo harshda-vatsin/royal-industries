@@ -30,21 +30,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F5F7;
+  background: #F7F9FB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B5121B;
+  background: #0B3A6E;
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8c0e14;
+  background: #072B52;
 }
 
 /* Parallax hero and overlay utilities */
 .hero-overlay {
-  background: linear-gradient(to right, rgba(18, 18, 18, 0.85) 0%, rgba(18, 18, 18, 0.6) 100%);
+  background: linear-gradient(to right, rgba(20, 33, 43, 0.85) 0%, rgba(20, 33, 43, 0.6) 100%);
 }
 
 /* Animated underline for hover states */
@@ -60,7 +60,7 @@ body {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #B5121B;
+  background-color: #0B3A6E;
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
@@ -94,3 +94,22 @@ body {
 .animate-fade-in-up {
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+
+
+/* Lessen global left/right margins (container paddings) */
+@media (min-width: 1024px) {
+  .lg\:px-12 {
+    padding-left: 2rem !important; /* reduces padding from 48px to 32px (lg:px-8) */
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:px-16 {
+    padding-left: 2.5rem !important; /* reduces padding from 64px to 40px (xl:px-10) */
+    padding-right: 2.5rem !important;
+  }
+}
+
+

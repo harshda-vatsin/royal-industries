@@ -2,19 +2,20 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Award, Target, Users } from 'lucide-react';
+import ScrollPop from './ScrollPop';
+import { Award, Target, Users, MapPin } from 'lucide-react';
 
 const STATS = [
-  { label: 'Years of Expertise', value: 22, suffix: '', icon: Award },
-  { label: 'Core Material Classes', value: 3, suffix: '+', icon: Target },
-  { label: 'Team Specialists', value: 2, suffix: '', icon: Users },
+  { label: 'Years of Experience', value: 21, suffix: '+', icon: Award },
+  { label: 'Delivered Annually', value: 35000, suffix: '+ MT', icon: Target },
+  { label: 'Customers Served', value: 600, suffix: '+', icon: Users },
+  { label: 'Supply & Delivery', value: 100, suffix: '', icon: MapPin, textValue: 'PAN India' },
 ];
 
 export default function AboutSection() {
   const [counts, setCounts] = useState(STATS.map(() => 0));
   const [isInView, setIsInView] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,8 +27,8 @@ export default function AboutSection() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
     }
 
     return () => observer.disconnect();
@@ -60,103 +61,74 @@ export default function AboutSection() {
   }, [isInView]);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white border-b border-gray-100" id="about">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
-          {/* Left: Image Block */}
-          <div className="lg:col-span-5 relative group">
-            <div className="absolute -top-4 -left-4 w-full h-full border-2 border-brand-red z-0 rounded-sm"></div>
-            <div className="relative z-10 overflow-hidden bg-charcoal aspect-[4/5] shadow-xl rounded-sm border border-gray-100">
-              <Image
-                src="/images/about_manufacturing_floor.png"
-                alt="Royale Industries warehouse operations"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover zoom-on-hover"
-                priority
-              />
-            </div>
-            
-            {/* Experience Tag overlay */}
-            <div className="absolute bottom-6 right-6 bg-brand-red text-white p-6 z-20 shadow-lg rounded-sm max-w-[200px]">
-              <span className="block font-heading font-extrabold text-3xl tracking-tight leading-none mb-1">2004</span>
-              <span className="block text-[10px] uppercase font-bold tracking-wider text-gray-200">Established & Supplying Since</span>
-            </div>
-          </div>
+    <>
+      {/* 1. Narrative Section */}
+      <ScrollPop>
+        <section className="py-32 lg:py-28 bg-[#E1EDFA] border-b border-gray-100 snap-align-start" id="about">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
 
-          {/* Right: Content Block */}
-          <div className="lg:col-span-7 flex flex-col space-y-8">
-            <div className="space-y-4">
-              <span className="text-xs font-bold uppercase tracking-widest text-brand-red block border-l-2 border-brand-red pl-2.5">
-                Corporate Profile
-              </span>
-              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-charcoal tracking-tight leading-tight">
-                Immense Expertise in Plastic Raw Materials
-              </h2>
-              <p className="text-gray-500 font-sans leading-relaxed text-base">
-                Established in 2004, Royale Industries has gained immense expertise in supplying and trading high-quality plastic raw materials: PVC granules, PE granules, EVA granules, and more. Located in Delhi, Delhi, we are recognized as one of the leading sellers of listed polymer products.
-              </p>
-              <p className="text-gray-500 font-sans leading-relaxed text-base">
-                Our business operates as a trusted Importer and Supplier, focused on delivering the best quality products and services to manufacturers who buy plastic raw materials in bulk. With a specialized team of two industry experts, we provide reliable, personalized, and efficient long-term supply partnerships.
-              </p>
-            </div>
+              {/* Left: Image Block */}
+              <div className="lg:col-span-6 relative w-full h-[300px] lg:h-[480px] overflow-hidden bg-charcoal rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+                <Image
+                  src="/images/about_polymer_facility.png"
+                  alt="Polymer processing facility"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover zoom-on-hover"
+                  priority
+                />
+              </div>
 
-            {/* Statistics Grid */}
-            <div className="grid grid-cols-3 gap-6 pt-4 border-t border-gray-100">
-              {STATS.map((stat, idx) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={idx} className="bg-lightgrey-light border border-gray-200/60 p-5 rounded-sm flex flex-col justify-center items-center text-center">
-                    <div className="p-2 bg-brand-red/5 rounded-sm text-brand-red mb-3">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="font-heading font-extrabold text-xl sm:text-2xl text-charcoal tracking-tight">
-                        {counts[idx]}
-                        <span className="text-brand-red">{stat.suffix}</span>
-                      </div>
-                      <div className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mt-1 leading-tight">
-                        {stat.label}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-              {/* Delhi Base Card */}
-              <div className="bg-lightgrey-light border border-gray-200/60 p-5 rounded-sm flex flex-col justify-center items-center text-center">
-                <div className="p-2 bg-brand-red/5 rounded-sm text-brand-red mb-3">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-heading font-extrabold text-base sm:text-lg text-charcoal tracking-tight">
-                    Delhi, DL
-                  </div>
-                  <div className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mt-1 leading-tight">
-                    Corporate Hub
-                  </div>
+              {/* Right: Content Block wrapped in a styled card */}
+              <div className="lg:col-span-6 bg-white border border-[#C4DBF5] border-l-4 border-l-brand-blue p-8 lg:p-10 rounded-2xl flex flex-col justify-center h-auto lg:h-[480px] shadow-[0_10px_25px_rgba(0,0,0,0.08)] relative overflow-hidden">
+                {/* Subtle decorative background pattern overlay */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(11,58,110,0.04),transparent_65%)] pointer-events-none" />
+
+                <div className="relative z-10 space-y-4">
+                  <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-charcoal tracking-tight leading-tight">
+                    More than Two Decades of Polymer Sourcing Expertise
+                  </h2>
+                  <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
+                    Established in May 2004, Royale Industries Pvt. Ltd. is a New Delhi-based importer, trader and supplier of polymer and plastic raw materials. With more than two decades of industry experience, we provide customers with access to a wide variety of polymer grades, including grades sourced to meet specific application requirements.
+                  </p>
+                  <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
+                    Today, Royale Industries delivers approximately 35,000 MT of material annually and serves more than 600 customers across India. Our portfolio supports applications across packaging, healthcare, foaming, BOPP, CPP and automotive segments, backed by responsive logistics and PAN-India delivery capabilities.
+                  </p>
                 </div>
               </div>
-            </div>
 
-            {/* CTA */}
-            <div className="pt-2">
-              <Link
-                href="/about"
-                className="inline-flex items-center space-x-2 text-brand-red hover:text-brand-red-dark text-xs sm:text-sm font-bold uppercase tracking-widest group"
-              >
-                <span>Read Our Corporate Journey</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-              </Link>
             </div>
-
           </div>
+        </section>
+      </ScrollPop>
 
+      {/* 2. Scroll Snapping Statistics Section */}
+      <section ref={statsRef} className="py-20 lg:py-24 bg-brand-blue snap-align-start" id="about-stats">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {STATS.map((stat, idx) => {
+              const Icon = stat.icon;
+              return (
+                <div key={idx} className="bg-white p-8 rounded-2xl flex flex-col justify-center items-center text-center shadow-[0_12px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.22)] transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="p-3 bg-brand-blue/5 rounded-sm text-brand-blue mb-4">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-tight whitespace-nowrap">
+                      {stat.textValue ? stat.textValue : counts[idx].toLocaleString()}
+                      <span className="text-brand-blue">{stat.suffix}</span>
+                    </div>
+                    <div className="text-sm font-bold text-black uppercase tracking-widest mt-2 leading-tight">
+                      {stat.label}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

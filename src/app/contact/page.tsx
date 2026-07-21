@@ -10,7 +10,10 @@ export default function ContactPage() {
 
       <SubpageHero
         title="Contact & RFQ Center"
-        bgImage="/images/contact_cta_bg.png"
+        breadcrumbs={[
+          { label: 'Home', href: '/' },
+          { label: 'Contact', href: '/contact' }
+        ]}
       />
 
       <main className="flex-grow">

@@ -10,19 +10,25 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          red: '#B5121B',
-          'red-dark': '#8c0e14',
-          'red-light': '#e01622',
+          blue: '#0B3A6E',
+          'blue-dark': '#072B52',
+          'blue-light': '#1769AA',
+          interactive: '#38BDF8',
+          'soft-bg': '#E1EDFA',
+          'blue-grey': '#5F7488',
+          navy: '#14212B',
+          green: '#00704A',
+          'green-dark': '#00593B',
         },
         charcoal: {
-          DEFAULT: '#1E1E1E',
-          light: '#333333',
-          dark: '#121212',
+          DEFAULT: '#17212B',
+          light: '#5F7488',
+          dark: '#14212B',
         },
         lightgrey: {
-          DEFAULT: '#F5F5F7',
-          light: '#FAFAFB',
-          dark: '#EBEBED',
+          DEFAULT: '#D5E6F7',
+          light: '#E1EDFA',
+          dark: '#C4DBF5',
         },
       },
       fontFamily: {
@@ -32,6 +38,20 @@ module.exports = {
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(15px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        'fade-in': 'fade-in 1s ease-out forwards',
+        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
       }
     },
   },

@@ -3,12 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
+import ScrollPop from './ScrollPop';
 import { ArrowRight } from 'lucide-react';
 
 const MATERIALS = [
   {
     id: 'pvc',
-    title: 'PVC Granules',
+    title: 'PVC Resins',
     description: 'Polyvinyl Chloride raw materials sourced from leading global producers. Offering high-quality suspension and emulsion grades suitable for electrical wire cabling, industrial pipes, and flexible profile extrusion.',
     image: '/images/about_manufacturing_floor.png',
     link: '/segments?type=pvc',
@@ -27,67 +28,76 @@ const MATERIALS = [
     image: '/images/industry_automotive.png',
     link: '/segments?type=eva',
   },
+  {
+    id: 'healthcare',
+    title: 'Healthcare Polymers',
+    description: 'Medical-grade polymer resins and copolymers sourced for pharmaceutical and healthcare manufacturing. Our grades support IV bottles, surgical mask meltblown filters, CPAP components, and sterilizable device housings.',
+    image: '/images/industry_healthcare.png',
+    link: '/segments?type=healthcare',
+  },
 ];
 
 export default function IndustriesSection() {
   return (
-    <section className="py-24 bg-white border-b border-gray-100" id="materials">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <SectionHeader
-          tag="Our Portfolio"
-          title="Plastic Raw Materials We Supply"
-          description="Buy premium-grade PVC, PE, and EVA granules in bulk from Royale Industries for the best quality products and service."
-          lightBg={false}
-        />
+    <ScrollPop>
+      <section className="py-24 lg:py-16 bg-lightgrey-light border-b border-gray-100 snap-align-start" id="materials">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
 
-        {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 max-w-5xl mx-auto">
-          {MATERIALS.map((mat) => (
-            <div
-              key={mat.id}
-              className="group bg-white border border-gray-200 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                {/* Card Image */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-charcoal">
-                  <Image
-                    src={mat.image}
-                    alt={`${mat.title} raw materials supply`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-cover zoom-on-hover"
-                  />
-                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-brand-red group-hover:w-full transition-all duration-300 z-10"></div>
+          <SectionHeader
+            tag="Our Portfolio"
+            title="Polymer & Raw Materials We Supply"
+            description="Sourcing and distributing a wide variety of premium polymer categories and custom grades in bulk from established global producers."
+            lightBg={true}
+          />
+
+          {/* 4-Column Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+            {MATERIALS.map((mat) => (
+              <div
+                key={mat.id}
+                className="group bg-white border border-gray-200 rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Card Image */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-charcoal">
+                    <Image
+                      src={mat.image}
+                      alt={`${mat.title} raw materials supply`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover zoom-on-hover"
+                    />
+                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-brand-blue group-hover:w-full transition-all duration-300 z-10"></div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-6 space-y-2">
+                    <h4 className="font-heading font-extrabold text-lg text-charcoal tracking-tight">
+                      {mat.title}
+                    </h4>
+                    <p className="text-gray-500 font-sans leading-relaxed text-xs text-justify">
+                      {mat.description}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Card Content */}
-                <div className="p-6 space-y-3">
-                  <h3 className="font-heading font-extrabold text-lg text-charcoal tracking-tight group-hover:text-brand-red transition-colors duration-200">
-                    {mat.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs sm:text-sm leading-relaxed font-sans line-clamp-3">
-                    {mat.description}
-                  </p>
+                {/* Card Footer Link */}
+                <div className="p-6 pt-0 border-t border-gray-50 mt-auto">
+                  <Link
+                    href={mat.link}
+                    className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-brand-blue hover:text-brand-blue-dark group/link pt-4"
+                  >
+                    <span>Learn Technical Specs</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/link:translate-x-1" />
+                  </Link>
                 </div>
-              </div>
 
-              {/* Card Footer Link */}
-              <div className="p-6 pt-0 border-t border-gray-50 mt-auto">
-                <Link
-                  href={mat.link}
-                  className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-brand-red hover:text-brand-red-dark group/link pt-4"
-                >
-                  <span>Learn Technical Specs</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/link:translate-x-1" />
-                </Link>
               </div>
+            ))}
+          </div>
 
-            </div>
-          ))}
         </div>
-
-      </div>
-    </section>
+      </section>
+    </ScrollPop>
   );
 }

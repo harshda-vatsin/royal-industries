@@ -2,54 +2,55 @@
 
 import { useState, useEffect } from 'react';
 import SectionHeader from './SectionHeader';
-import { Database, ShieldCheck, Ship, Warehouse, Package, Truck } from 'lucide-react';
+import ScrollPop from './ScrollPop';
+import { ClipboardList, Search, Users, Globe, Warehouse, Truck } from 'lucide-react';
 
 const STEPS = [
   {
     step: '01',
-    title: 'Global Sourcing',
-    subtitle: 'Premium Petrochemicals',
-    description: 'We source high-grade PVC, PE, and EVA raw materials from Fortune 500 petrochemical manufacturers across East Asia, Europe, and the Middle East, ensuring superior product baselines.',
-    icon: Database,
+    title: 'Requirement Understanding',
+    subtitle: 'Client Alignment',
+    description: 'We align closely with your team to understand specific polymer material requirements, grade parameters, application parameters, volume needs, and target delivery windows.',
+    icon: ClipboardList,
   },
   {
     step: '02',
-    title: 'Quality Verification',
-    subtitle: 'Strict Inspection',
-    description: 'We require a Certificate of Analysis (COA) for every polymer batch and run independent inspections to ensure physical and chemical properties conform to international standards.',
-    icon: ShieldCheck,
+    title: 'Grade Identification',
+    subtitle: 'Expert Sourcing',
+    description: 'Using our extensive polymer product database and technical experience, we identify the exact polymer grades that fit your processing machinery and structural parameters.',
+    icon: Search,
   },
   {
     step: '03',
-    title: 'Import & Customs',
-    subtitle: 'Logistics Coordination',
-    description: 'Our experienced logistics channels manage container shipping, import documentation, and fast customs clearances at Indian ports to prevent supply chain bottlenecks.',
-    icon: Ship,
+    title: 'Commercial Proposal',
+    subtitle: 'Wholesale Offer',
+    description: 'We submit structured commercial pricing and transport logistics timelines matching your volume forecasts, accompanied by manufacturer Certificate of Analysis certifications.',
+    icon: Users,
   },
   {
     step: '04',
-    title: 'Delhi Warehousing',
-    subtitle: 'Central Hub Storage',
-    description: 'Bulk materials are stored in our secure, dry, and dust-free warehouse in Delhi, maintaining product integrity and preserving raw material quality.',
-    icon: Warehouse,
+    title: 'Global Sourcing & Import',
+    subtitle: 'Supply Chain Sourcing',
+    description: 'Royale Industries coordinates global purchasing paths, custom clearances, and ocean transport lines to import plastic granules directly from reliable chemical producers.',
+    icon: Globe,
   },
   {
     step: '05',
-    title: 'Bulk Packaging',
-    subtitle: 'Secure Dispatch',
-    description: 'Resins are dispatched in heavy-duty, moisture-proof, industrial bags and securely palletized to guarantee zero contamination or moisture absorption during local transport.',
-    icon: Package,
+    title: 'Warehousing & Quality',
+    subtitle: 'Batch Testing',
+    description: 'Imported granules are cataloged and stored inside dry, climate-appropriate regional warehouses. We execute batch number recording and visual inspections for quality security.',
+    icon: Warehouse,
   },
   {
     step: '06',
-    title: 'Direct Delivery',
-    subtitle: 'On-Time Supply',
-    description: 'We coordinate direct fleet delivery to manufacturing facilities in Delhi and across India, ensuring consistent, long-term supply cycles for our bulk partners.',
+    title: 'Logistics & Delivery',
+    subtitle: 'PAN-India Transport',
+    description: 'Our logistics fleet coordinates secure regional freight dispatch to deliver raw materials straight to your factory floor, backed by transparent transit tracking.',
     icon: Truck,
   },
 ];
 
-export default function ManufacturingSection() {
+export default function SupplyWorkflowSection() {
   const [activeStep, setActiveStep] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -58,19 +59,20 @@ export default function ManufacturingSection() {
 
     const timer = setTimeout(() => {
       setActiveStep((prev) => (prev + 1) % STEPS.length);
-    }, 4500); // Elegant, slow 4.5-second time lapse
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, [activeStep, isAutoPlaying]);
 
   return (
-    <section className="py-24 bg-white border-b border-gray-100" id="workflow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ScrollPop>
+    <section className="py-24 lg:py-16 bg-white border-b border-gray-100 snap-align-start" id="workflow">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         
         <SectionHeader
           tag="Our Workflow"
-          title="Supply Chain & Import Sourcing Workflow"
-          description="From global petrochemical sourcing to local bulk delivery in Delhi, Royale Industries manages a secure, professional supply chain to ensure product quality."
+          title="Sourcing & Supply Workflow"
+          description="From initial requirement alignment to nationwide B2B delivery, Royale Industries manages a secure, professional procurement process to ensure material consistency."
           lightBg={false}
         />
 
@@ -79,7 +81,7 @@ export default function ManufacturingSection() {
           {/* Connector Line */}
           <div className="absolute top-[48px] left-10 right-10 h-0.5 bg-gray-200 z-0">
             <div
-              className="h-full bg-brand-red transition-all duration-500 ease-out"
+              className="h-full bg-brand-blue transition-all duration-500 ease-out"
               style={{ width: `${(activeStep / (STEPS.length - 1)) * 100}%` }}
             ></div>
           </div>
@@ -101,9 +103,9 @@ export default function ManufacturingSection() {
                     onClick={() => setActiveStep(idx)}
                     className={`w-24 h-24 rounded-full flex items-center justify-center border-2 shadow-sm transition-all duration-300 ${
                       isActive
-                        ? 'bg-brand-red border-brand-red text-white scale-105 shadow-md'
+                        ? 'bg-brand-blue border-brand-blue text-white scale-105 shadow-md'
                         : isPassed
-                        ? 'bg-white border-brand-red text-brand-red'
+                        ? 'bg-white border-brand-blue text-brand-blue'
                         : 'bg-white border-gray-200 text-gray-400 hover:border-gray-400 hover:text-charcoal'
                     }`}
                     aria-label={`Go to step ${step.step}: ${step.title}`}
@@ -112,12 +114,12 @@ export default function ManufacturingSection() {
                   </button>
                   
                   <span className={`text-[10px] uppercase font-extrabold tracking-widest mt-4 transition-colors duration-200 ${
-                    isActive ? 'text-brand-red' : 'text-gray-400'
+                    isActive ? 'text-brand-blue' : 'text-gray-400'
                   }`}>
                     Stage {step.step}
                   </span>
                   
-                  <h3 className={`font-heading font-extrabold text-sm text-center tracking-tight mt-1 max-w-[120px] leading-tight ${
+                  <h3 className={`font-heading font-extrabold text-xs text-center tracking-tight mt-1 max-w-[120px] leading-tight ${
                     isActive ? 'text-charcoal' : 'text-gray-500 group-hover:text-charcoal'
                   }`}>
                     {step.title}
@@ -131,9 +133,9 @@ export default function ManufacturingSection() {
           <div 
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
-            className="mt-16 bg-lightgrey border border-gray-200 p-10 rounded-sm shadow-sm transition-all duration-300 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8"
+            className="mt-16 bg-white border border-gray-200 p-10 rounded-sm shadow-sm transition-all duration-300 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8"
           >
-            <div className="w-20 h-20 bg-white rounded-sm flex items-center justify-center border border-gray-200 shadow-sm flex-shrink-0 text-brand-red">
+            <div className="w-20 h-20 bg-white rounded-sm flex items-center justify-center border border-gray-200 shadow-sm flex-shrink-0 text-brand-blue">
               {(() => {
                 const ActiveIcon = STEPS[activeStep].icon;
                 return <ActiveIcon className="w-10 h-10" />;
@@ -141,7 +143,7 @@ export default function ManufacturingSection() {
             </div>
             <div className="flex-grow space-y-2">
               <div className="flex items-center space-x-3">
-                <span className="text-xs font-bold uppercase tracking-widest text-brand-red">
+                <span className="text-xs font-bold uppercase tracking-widest text-brand-blue">
                   Stage {STEPS[activeStep].step}
                 </span>
                 <span className="w-1.5 h-1.5 bg-gray-300 rounded-full"></span>
@@ -167,14 +169,14 @@ export default function ManufacturingSection() {
               <div key={idx} className="flex gap-6 relative">
                 
                 {/* Vertical Step Node */}
-                <div className="w-14 h-14 rounded-full bg-white border-2 border-gray-200 shadow-sm flex items-center justify-center flex-shrink-0 text-brand-red z-10">
+                <div className="w-14 h-14 rounded-full bg-white border-2 border-gray-200 shadow-sm flex items-center justify-center flex-shrink-0 text-brand-blue z-10">
                   <Icon className="w-6 h-6" />
                 </div>
 
                 {/* Content Panel */}
-                <div className="bg-lightgrey-light border border-gray-200 p-6 rounded-sm shadow-sm flex-grow space-y-2">
+                <div className="bg-white border border-gray-200 p-6 rounded-sm shadow-sm flex-grow space-y-2">
                   <div className="flex items-center space-x-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-blue">
                       Stage {step.step}
                     </span>
                     <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
@@ -197,5 +199,6 @@ export default function ManufacturingSection() {
 
       </div>
     </section>
+    </ScrollPop>
   );
 }

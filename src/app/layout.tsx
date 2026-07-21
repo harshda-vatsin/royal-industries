@@ -15,13 +15,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Royale Industries | Importer & Supplier of Plastic Raw Materials",
-  description: "Established in 2004, Royale Industries is a leading importer and supplier of premium plastic raw materials: PVC granules, PE granules, EVA granules, and more in Delhi, Delhi. Sourcing bulk polymers for high-quality products and service.",
-  keywords: "Royale Industries, Plastic raw materials, PVC granules, PE granules, EVA granules, Importer, Supplier, Delhi, bulk polymer supplier",
+  title: "Royale Industries | Importer & Supplier of Polymer Raw Materials",
+  description: "Established in May 2004, Royale Industries is a leading B2B importer, trader, and supplier of a wide variety of polymer and plastic raw materials in New Delhi / Delhi, serving industries PAN India.",
+  keywords: "Royale Industries, polymer raw materials, plastic granules, bulk polymer importer, polymer trader, New Delhi supplier, custom polymer grades, PAN India polymer supply",
   authors: [{ name: "Royale Industries" }],
   openGraph: {
-    title: "Royale Industries | Importer & Supplier of Plastic Raw Materials",
-    description: "Established in 2004, Royale Industries is a leading importer and supplier of premium plastic raw materials: PVC granules, PE granules, and EVA granules in Delhi.",
+    title: "Royale Industries | Importer & Supplier of Polymer Raw Materials",
+    description: "Established in May 2004, Royale Industries is a trusted B2B importer and supplier of a wide range of polymer raw materials based in New Delhi.",
     type: "website",
     locale: "en_US",
   },

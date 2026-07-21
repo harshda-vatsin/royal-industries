@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
+import ScrollPop from './ScrollPop';
 import { ArrowRight, FileDown, Layers, Activity, ShieldAlert } from 'lucide-react';
 
 const PRODUCTS = [
@@ -15,7 +16,7 @@ const PRODUCTS = [
       'Suspension grades (K-values: K-57, K-67, K-70)',
       'Emulsion & compounding grades for flexible and rigid designs',
       'Ideal for wire cabling, industrial hose, and profiles',
-      'Direct import distribution with certified compliance records',
+      'Direct import distribution with manufacturer Certificate of Analysis (COA) verification',
     ],
     image: '/images/about_manufacturing_floor.png',
     icon: Layers,
@@ -24,13 +25,13 @@ const PRODUCTS = [
   {
     id: 'pe-granules',
     name: 'PE Granules (Polyethylene)',
-    tagline: 'Blown film, injection, and blow molding grades.',
-    description: 'We supply high-grade Polyethylene (PE) granules in bulk, covering Linear Low Density (LLDPE), Low Density (LDPE), and High Density (HDPE) variants. Engineered for optimal processing and mechanical properties.',
+    tagline: 'LDPE, LLDPE, and HDPE polymer raw materials.',
+    description: 'Our Polyethylene (PE) raw materials support bulk manufacturing operations across packing, molding, and industrial extrusion. We provide consistent access to prime grade granules sourced to meet precise melt flow rate and density parameters.',
     features: [
-      'LLDPE film grades with high tensile & puncture strength',
-      'LDPE grades for general-purpose flexible film extrusion',
-      'HDPE grades for high-stiffness blow and injection molding',
-      'FDA-compliant food contact and packaging materials',
+      'LDPE (Low Density Polyethylene) for high-clarity films & packaging',
+      'LLDPE (Linear Low Density Polyethylene) for strong stretch/cling films',
+      'HDPE (High Density Polyethylene) for rigid blow molding and pipes',
+      'Curated wholesale supply paths matching international quality standards',
     ],
     image: '/images/industry_packaging.png',
     icon: Activity,
@@ -39,13 +40,13 @@ const PRODUCTS = [
   {
     id: 'eva-granules',
     name: 'EVA Granules (Ethylene-Vinyl Acetate)',
-    tagline: 'High-flexibility copolymers for footwear and adhesives.',
-    description: 'Imported Ethylene-Vinyl Acetate (EVA) copolymer granules designed for advanced foaming and adhesive formulations. Features outstanding stress-crack resistance, low-temperature flexibility, and excellent elasticity.',
+    tagline: 'Premium copolymers for flexible & foaming segments.',
+    description: 'Specialty Ethylene-Vinyl Acetate (EVA) granules curated for manufacturing segments that require high flexibility, low-temperature toughness, and stress-crack resistance. Ideal for footwear, foam sheets, and adhesive sectors.',
     features: [
-      'Copolymer grades with varying VA content (9% to 28%)',
-      'Exceptional mechanical cushioning and impact absorption',
-      'Preferred by footwear midsoles and foam sheet manufacturers',
-      'Excellent compatibility for hot-melt adhesive formulations',
+      'VA content grades tailored to specific processing requirements',
+      'Excellent elasticity and stress-crack resistance properties',
+      'Perfect for shoes midsoles, toys, insulation sheets, and solar encapsulation',
+      'PAN India transport logistics and bulk warehousing support',
     ],
     image: '/images/industry_automotive.png',
     icon: ShieldAlert,
@@ -55,21 +56,21 @@ const PRODUCTS = [
 
 export default function ProductsSection() {
   return (
-    <section className="py-24 bg-lightgrey-light border-b border-gray-200" id="products">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ScrollPop>
+    <section className="py-24 lg:py-16 bg-lightgrey-light border-b border-gray-200 snap-align-start" id="products">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         
         <SectionHeader
           tag="Material Portfolio"
-          title="Imported Bulk Plastic Raw Materials"
-          description="Buy premium PVC, PE, and EVA granules in bulk from Royale Industries. We guarantee batch consistency, competitive pricing, and certified quality grades."
+          title="Imported Bulk Polymer Raw Materials"
+          description="Sourcing premium PVC, PE, and EVA granules in bulk from established global producers. We guarantee batch consistency, competitive wholesale pricing, and verified manufacturer certification support."
           lightBg={true}
         />
 
         {/* Alternating Layout */}
-        <div className="space-y-24 mt-12">
+        <div className="space-y-24 mt-12 lg:space-y-16">
           {PRODUCTS.map((prod, idx) => {
             const isEven = idx % 2 === 0;
-            const Icon = prod.icon;
             return (
               <div
                 key={prod.id}
@@ -78,64 +79,61 @@ export default function ProductsSection() {
                 
                 {/* Image Column */}
                 <div className={`lg:col-span-6 ${isEven ? 'lg:order-1' : 'lg:order-2'} relative group`}>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-brand-red/10 to-charcoal/10 rounded-sm blur-sm opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative overflow-hidden aspect-[4/3] bg-charcoal rounded-sm border border-gray-200 shadow-sm">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-brand-blue/10 to-charcoal/10 rounded-sm blur-sm opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative overflow-hidden bg-charcoal aspect-[4/3] rounded-sm border border-gray-200/60 shadow-md">
                     <Image
                       src={prod.image}
-                      alt={prod.name}
+                      alt={`${prod.name} polymer raw materials supply`}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 45vw"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
                       className="object-cover zoom-on-hover"
                     />
                   </div>
                 </div>
 
                 {/* Content Column */}
-                <div className={`lg:col-span-6 ${isEven ? 'lg:order-2' : 'lg:order-1'} space-y-6`}>
-                  
-                  {/* Icon + Title Block */}
+                <div className={`lg:col-span-6 ${isEven ? 'lg:order-2' : 'lg:order-1'} flex flex-col space-y-5`}>
                   <div className="space-y-2">
-                    <div className="inline-flex items-center space-x-2 text-brand-red">
-                      <Icon className="w-5 h-5" />
-                      <span className="text-xs font-bold uppercase tracking-wider">Granules Category {idx + 1}</span>
+                    <div className="flex items-center space-x-2">
+                      <span className="p-2 bg-brand-blue/5 rounded-sm text-brand-blue">
+                        <prod.icon className="w-5 h-5" />
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
+                        {prod.tagline}
+                      </span>
                     </div>
-                    <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-charcoal tracking-tight leading-tight">
+                    <h3 className="font-heading font-extrabold text-2xl text-charcoal tracking-tight">
                       {prod.name}
                     </h3>
-                    <p className="text-sm font-semibold text-brand-red tracking-wide">
-                      {prod.tagline}
+                    <p className="text-gray-500 font-sans leading-relaxed text-xs text-justify">
+                      {prod.description}
                     </p>
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-500 text-sm sm:text-base leading-relaxed font-sans">
-                    {prod.description}
-                  </p>
-
-                  {/* Bullet points */}
-                  <ul className="space-y-3.5 pt-2">
-                    {prod.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start text-sm text-gray-500">
-                        <span className="w-1.5 h-1.5 bg-brand-red rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        <span className="leading-relaxed">{feature}</span>
+                  {/* Features List */}
+                  <ul className="space-y-2.5 pt-2">
+                    {prod.features.map((feat, fidx) => (
+                      <li key={fidx} className="flex items-start space-x-2.5 text-xs text-gray-600 font-sans">
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-blue mt-1.5 flex-shrink-0"></span>
+                        <span>{feat}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-gray-100">
+                  {/* Action Links */}
+                  <div className="pt-4 flex flex-wrap gap-4 items-center">
                     <Link
                       href={prod.technicalLink}
-                      className="inline-flex items-center space-x-2 bg-brand-red hover:bg-brand-red-dark text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-sm transition-colors shadow-sm"
+                      className="inline-flex items-center space-x-2 bg-brand-blue hover:bg-brand-blue-dark text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-sm shadow-sm transition-all duration-200"
                     >
-                      <span>Technical Specs</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <span>View Technical Specs</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                     <a
                       href="/contact?rfq=true"
-                      className="inline-flex items-center space-x-2 border border-gray-300 hover:border-brand-red text-charcoal hover:text-brand-red text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-sm transition-all"
+                      className="inline-flex items-center space-x-2 border border-gray-300 hover:border-brand-blue text-charcoal hover:text-brand-blue text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-sm transition-all"
                     >
-                      <FileDown className="w-4 h-4 text-gray-400 group-hover:text-brand-red" />
+                      <FileDown className="w-4 h-4 text-gray-400 group-hover:text-brand-blue" />
                       <span>Request Material TDS</span>
                     </a>
                   </div>
@@ -149,5 +147,6 @@ export default function ProductsSection() {
 
       </div>
     </section>
+    </ScrollPop>
   );
 }

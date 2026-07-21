@@ -3,9 +3,10 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import IndustriesSection from '@/components/IndustriesSection';
 import ProductsSection from '@/components/ProductsSection';
-import ManufacturingSection from '@/components/ManufacturingSection';
+import SupplyWorkflowSection from '@/components/SupplyWorkflowSection';
 import QASection from '@/components/QASection';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import ClientCredibility from '@/components/ClientCredibility';
 import RFQSection from '@/components/RFQSection';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
@@ -26,11 +27,14 @@ export default function Home() {
         {/* 4. Materials We Supply Cards */}
         <IndustriesSection />
 
+        {/* 4.5 Client Credibility */}
+        <ClientCredibility />
+
         {/* 5. Material Details Showcase */}
         <ProductsSection />
 
         {/* 6. Sourcing & Supply Workflow */}
-        <ManufacturingSection />
+        <SupplyWorkflowSection />
 
         {/* 7. Quality & Sourcing Standards */}
         <QASection />
