@@ -128,19 +128,17 @@ export default function HeroSection() {
       <div className="relative w-full px-4 sm:px-6 lg:px-8 z-10 flex flex-col items-center flex-grow justify-center mt-[-20px] sm:mt-0">
         
         {/* Thought of the Day Banner */}
-        <div className="w-full max-w-3xl lg:max-w-5xl mx-0 mt-[-30px] lg:mt-[-50px] mb-2 flex items-center transition-all duration-250 animate-fade-in-up group cursor-default">
+        <div className="w-full max-w-3xl lg:max-w-5xl mx-0 mt-[-30px] lg:mt-[-50px] mb-2 flex flex-col items-start transition-all duration-250 animate-fade-in-up group cursor-default">
           {isLoading ? (
-            <span className="text-white/70 text-[13px] sm:text-sm font-sans tracking-wide w-full text-center">Loading today's thought...</span>
+            <span className="text-white/70 text-[13px] sm:text-sm font-sans tracking-wide">Loading today's thought...</span>
           ) : (
-            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full space-y-2 sm:space-y-0 sm:space-x-4">
-              <div className="flex-grow flex flex-col justify-center w-fit max-w-full">
-                <span className="text-sm sm:text-base leading-relaxed tracking-wide">
-                  <span className="text-white font-medium">"{quote?.text}"</span>
-                </span>
-                <span className="block text-right text-[13px] sm:text-sm italic text-gray-300 mt-1 sm:mt-1.5 w-full">
-                  {quote?.author}
-                </span>
-              </div>
+            <div className="inline-flex flex-col w-auto max-w-full">
+              <span className="text-sm sm:text-base leading-relaxed tracking-wide text-white font-medium">
+                "{quote?.text}"
+              </span>
+              <span className="text-right text-[13px] sm:text-sm italic text-gray-300 mt-1">
+                {quote?.author}
+              </span>
             </div>
           )}
         </div>
