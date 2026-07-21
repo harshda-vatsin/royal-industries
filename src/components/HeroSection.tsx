@@ -128,12 +128,12 @@ export default function HeroSection() {
       <div className="relative w-full px-4 sm:px-6 lg:px-8 z-10 flex flex-col items-center flex-grow justify-center mt-[-20px] sm:mt-0">
         
         {/* Thought of the Day Banner */}
-        <div className="w-[95%] md:w-[75%] lg:w-[55%] mx-auto mt-[-30px] lg:mt-[-50px] mb-2 flex items-center px-6 sm:px-10 transition-all duration-250 animate-fade-in-up self-start sm:self-center group cursor-default">
+        <div className="w-full max-w-3xl lg:max-w-5xl mx-0 mt-[-30px] lg:mt-[-50px] mb-2 flex items-center transition-all duration-250 animate-fade-in-up group cursor-default">
           {isLoading ? (
             <span className="text-white/70 text-[13px] sm:text-sm font-sans tracking-wide w-full text-center">Loading today's thought...</span>
           ) : (
             <div className="flex flex-col sm:flex-row items-start sm:items-center w-full space-y-2 sm:space-y-0 sm:space-x-4">
-              <div className="flex-grow flex flex-col justify-center">
+              <div className="flex-grow flex flex-col justify-center w-fit max-w-full">
                 <span className="text-sm sm:text-base leading-relaxed tracking-wide">
                   <span className="text-white font-medium">"{quote?.text}"</span>
                 </span>
