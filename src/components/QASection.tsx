@@ -101,7 +101,7 @@ export default function QASection() {
 
             <div className="relative group overflow-hidden bg-charcoal aspect-[4/3] shadow-md rounded-sm">
               <Image
-                src="/images/about_manufacturing_floor.png"
+                src="/polymer_testing.jpg"
                 alt="Royale Industries material supply operations"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"
