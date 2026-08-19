@@ -15,17 +15,20 @@ export default function Footer() {
           {/* Column 1: Company Profile */}
           <div className="flex flex-col space-y-6">
             <Link href="/" className="flex items-center space-x-2 bg-white p-2 rounded-sm w-fit inline-block">
-              <Image 
-                src="/logo_main.png" 
-                alt="Royale Resinex Logo" 
-                width={200} 
+              <Image
+                src="/logo_main.png"
+                alt="Royale Logo"
+                width={200}
                 height={60} 
                 className="h-10 w-auto object-contain"
               />
             </Link>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed font-sans font-light">
-              Established in May 2004, Royale Industries is a leading B2B importer, trader, and supplier of a wide variety of polymer and plastic raw materials in bulk. Sourced from global producers, based in New Delhi, Delhi.
+              Established in May 2004, Royale is a leading B2B importer, trader, and supplier of a wide variety of polymer and plastic raw materials in bulk. Sourced from global producers, based in New Delhi, Delhi.
             </p>
+            <span className="inline-flex w-fit items-center space-x-1.5 bg-brand-blue/15 border border-brand-blue/40 text-white px-3 py-1.5 rounded-sm text-[11px] font-bold uppercase tracking-wider">
+              <span>Authorized Distributor · LyondellBasell</span>
+            </span>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" className="w-8 h-8 rounded-sm bg-charcoal-light flex items-center justify-center hover:bg-brand-blue transition-colors duration-200" aria-label="LinkedIn">
                 <svg className="w-4.5 h-4.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -65,7 +68,7 @@ export default function Footer() {
                 <li>
                   <Link href="/chemical-types" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200 -ml-5 group-hover:ml-0" />
-                    <span>Chemical Types</span>
+                    <span>Products</span>
                   </Link>
                 </li>
                 <li>
@@ -95,21 +98,27 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <Link href="/chemical-types?type=pvc" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
+                  <Link href="/chemical-types/pvc" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200 -ml-5 group-hover:ml-0" />
                     <span>PVC Resins</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/chemical-types?type=pe" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
+                  <Link href="/chemical-types/pe" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200 -ml-5 group-hover:ml-0" />
                     <span>PE Resins</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/chemical-types?type=eva" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
+                  <Link href="/chemical-types/eva" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200 -ml-5 group-hover:ml-0" />
                     <span>EVA Granules</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/chemical-types/chemicals" className="hover:text-brand-blue transition-colors duration-200 flex items-center group">
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-200 -ml-5 group-hover:ml-0" />
+                    <span>Chemicals</span>
                   </Link>
                 </li>
               </ul>
@@ -130,7 +139,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-brand-blue flex-shrink-0" />
-                <a href="mailto:sales@indiaroyale.com" className="hover:text-brand-blue transition-colors">sales@indiaroyale.com</a>
+                <a href="mailto:office@royaleind.in" className="hover:text-brand-blue transition-colors">office@royaleind.in</a>
               </div>
 
               {/* Mini Map Placeholder */}

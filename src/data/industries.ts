@@ -43,7 +43,7 @@ export const INDUSTRIES_DATA: Record<string, IndustryData> = {
   },
   'popp': {
     id: 'popp',
-    name: 'POPP Film Packaging',
+    name: 'BOPP Film Packaging',
     description: 'Specialty film packaging and lamination polymers.',
     useCases: ['Specialty Film Packaging', 'Laminations'],
     relevantChemicalIds: [

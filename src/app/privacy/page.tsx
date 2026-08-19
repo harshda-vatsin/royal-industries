@@ -42,7 +42,7 @@ export default function PrivacyPage() {
               4. Contact Us
             </h2>
             <p>
-              For inquiries regarding material compliance records or data requests, please contact our New Delhi offices at <a href="mailto:info@indiaroyale.com" className="text-brand-blue hover:underline font-semibold">info@indiaroyale.com</a>.
+              For inquiries regarding material compliance records or data requests, please contact our New Delhi offices at <a href="mailto:office@royaleind.in" className="text-brand-blue hover:underline font-semibold">office@royaleind.in</a>.
             </p>
           </div>
         </div>

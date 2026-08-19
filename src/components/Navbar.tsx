@@ -8,8 +8,8 @@ import { Mail, Phone, Menu, X } from 'lucide-react';
 
 const MENU_ITEMS = [
   { name: 'About Us', href: '/about' },
-  { 
-    name: 'Chemical Types', 
+  {
+    name: 'Products',
     href: '/chemical-types',
     subItems: [
       { name: 'PVC Resins', href: '/chemical-types/pvc' },
@@ -17,6 +17,7 @@ const MENU_ITEMS = [
       { name: 'EVA Copolymers', href: '/chemical-types/eva' },
       { name: 'Polypropylene (PP)', href: '/chemical-types/pp' },
       { name: 'Specialty Copolymers', href: '/chemical-types/copolymers' },
+      { name: 'Chemicals', href: '/chemical-types/chemicals' },
     ]
   },
   { name: 'Applications', href: '/applications' },
@@ -47,14 +48,17 @@ export default function Navbar() {
       <div className="bg-charcoal text-gray-300 text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-charcoal-light relative z-50">
         <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
           <div className="flex items-center space-x-6">
-            <a href="mailto:info@indiaroyale.com" className="flex items-center space-x-1.5 hover:text-brand-blue transition-colors">
+            <a href="mailto:office@royaleind.in" className="flex items-center space-x-1.5 hover:text-brand-blue transition-colors">
               <Mail className="w-3.5 h-3.5" />
-              <span>info@indiaroyale.com</span>
+              <span>office@royaleind.in</span>
             </a>
             <a href="tel:+911146200000" className="flex items-center space-x-1.5 hover:text-brand-blue transition-colors">
               <Phone className="w-3.5 h-3.5" />
               <span>+91-11-46200000</span>
             </a>
+            <span className="hidden md:inline-flex items-center space-x-1.5 bg-brand-blue/20 border border-brand-blue/40 text-white px-2.5 py-1 rounded-sm text-[11px] font-bold uppercase tracking-wider">
+              <span>Authorized Distributor · LyondellBasell</span>
+            </span>
           </div>
           <div className="flex items-center space-x-5">
             <div className="flex items-center space-x-3 pr-4">
@@ -90,10 +94,10 @@ export default function Navbar() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <Image 
-                src="/logo_main.png" 
-                alt="Royale Resinex Logo" 
-                width={240} 
+              <Image
+                src="/logo_main.png"
+                alt="Royale Logo"
+                width={240}
                 height={80} 
                 className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 priority

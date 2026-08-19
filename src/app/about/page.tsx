@@ -27,7 +27,7 @@ const TIMELINE = [
   {
     year: '2004',
     title: 'Company Foundation',
-    description: 'Royale Industries was founded in May 2004 in New Delhi with the objective of providing focused polymer sourcing and supply services to industrial customers.',
+    description: 'Royale was founded in May 2004 in New Delhi with the objective of providing focused polymer sourcing and supply services to industrial customers.',
   },
   {
     year: '2009',
@@ -86,7 +86,7 @@ export default function AboutPage() {
                   </p>
                   
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    Built on long-standing supplier relationships and a practical understanding of the polymer market, Royale Industries continues to operate with a clear focus on material availability, responsive communication, and dependable B2B supply.
+                    Built on long-standing supplier relationships and a practical understanding of the polymer market, Royale continues to operate with a clear focus on material availability, responsive communication, and dependable B2B supply.
                   </p>
                 </div>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
                   Connecting Global Polymer Supply with Indian Industry
                 </h2>
                 <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                  The polymer industry operates across a complex network of manufacturers, refineries, international suppliers, import channels, distributors, and industrial consumers. Royale Industries operates as a sourcing and supply partner within this network.
+                  The polymer industry operates across a complex network of manufacturers, refineries, international suppliers, import channels, distributors, and industrial consumers. Royale operates as a sourcing and supply partner within this network.
                 </p>
                 <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base mt-4">
                   We identify polymer sourcing opportunities, coordinate with established suppliers, evaluate material documentation, and manage the commercial and logistical processes required to supply materials to industrial customers across India. Our role extends beyond conventional trading. We help customers navigate material availability, grade requirements, bulk procurement, and changing market conditions through direct communication and industry experience.
@@ -254,7 +254,7 @@ export default function AboutPage() {
               <SectionHeader
                 tag="Our Core Values"
                 title="Principles That Guide Every Business Relationship"
-                description="Royale Industries operates with a clear set of values to maintain trust, transparency, and reliable operations."
+                description="Royale operates with a clear set of values to maintain trust, transparency, and reliable operations."
                 lightBg={false}
                 centered={true}
               />
@@ -352,7 +352,7 @@ export default function AboutPage() {
                       Polymer sourcing requires more than identifying a product and arranging delivery. Material grades, manufacturer specifications, batch documentation, availability, commercial quantities, logistics, and procurement timelines can significantly influence an industrial buyer's sourcing decisions.
                     </p>
                     <p className="text-gray-600 font-sans leading-relaxed text-sm">
-                      Since 2004, Royale Industries has developed practical experience across these areas of the polymer trade. Our team works directly with customers to understand their material requirements and coordinate sourcing based on available grades and supply options. This experience allows us to respond efficiently to procurement enquiries and maintain clear communication throughout the sourcing process.
+                      Since 2004, Royale has developed practical experience across these areas of the polymer trade. Our team works directly with customers to understand their material requirements and coordinate sourcing based on available grades and supply options. This experience allows us to respond efficiently to procurement enquiries and maintain clear communication throughout the sourcing process.
                     </p>
                   </div>
                   
@@ -378,7 +378,7 @@ export default function AboutPage() {
                       Reliable polymer trading depends heavily on access to material, supplier communication, and an understanding of international and domestic sourcing channels.
                     </p>
                     <p className="text-gray-300 font-sans leading-relaxed text-sm">
-                      Over the years, Royale Industries has developed relationships across the polymer supply ecosystem, enabling us to explore material options from established manufacturers, refineries, and suppliers.
+                      Over the years, Royale has developed relationships across the polymer supply ecosystem, enabling us to explore material options from established manufacturers, refineries, and suppliers.
                     </p>
                     <p className="text-gray-300 font-sans leading-relaxed text-sm">
                       Our sourcing approach focuses on understanding customer requirements and identifying available grades, quantities, and supply options through our network. These relationships allow our team to remain closely connected with the market and respond to changing material requirements and availability.
@@ -414,7 +414,7 @@ export default function AboutPage() {
               </h2>
               <div className="w-16 h-1 bg-brand-interactive my-5"></div>
               <p className="text-base text-gray-300 leading-relaxed font-sans mt-2">
-                Since May 2004, Royale Industries has supplied specialized polymer raw materials to manufacturers in Delhi and across India. Our growth reflects more than two decades of supplier relationships, customer confidence, and experience in the Indian polymer market.
+                Since May 2004, Royale has supplied specialized polymer raw materials to manufacturers in Delhi and across India. Our growth reflects more than two decades of supplier relationships, customer confidence, and experience in the Indian polymer market.
               </p>
             </div>
 
@@ -463,7 +463,7 @@ export default function AboutPage() {
                     The versatility of polymers makes them essential across a wide range of industrial applications.
                   </p>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    Royale Industries supports material requirements for manufacturers and industrial buyers operating across sectors where polymer quality, grade consistency, and dependable sourcing are critical.
+                    Royale supports material requirements for manufacturers and industrial buyers operating across sectors where polymer quality, grade consistency, and dependable sourcing are critical.
                   </p>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
                     Our customer requirements may span automotive components, packaging applications, consumer products, industrial manufacturing, electrical applications, and other polymer-based production environments. Each sourcing enquiry is evaluated according to the customer's material, grade, quantity, and supply requirements.
@@ -488,7 +488,7 @@ export default function AboutPage() {
                     A Highly Specialized Team of ~15 Professionals
                   </h3>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm">
-                    Royale Industries maintains a focused and experienced team of approximately 15 employees.
+                    Royale maintains a focused and experienced team of approximately 15 employees.
                   </p>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm">
                     Our compact organizational structure enables direct communication and faster coordination between customers, suppliers, and the people responsible for managing their requirements.
@@ -671,7 +671,7 @@ export default function AboutPage() {
                     The polymer market changes continuously. Material availability, international supply conditions, logistics, and industrial demand can shift over time. What remains constant is the importance of dependable business relationships.
                   </p>
                   <p className="text-gray-300 font-sans leading-relaxed text-sm sm:text-base">
-                    Royale Industries has grown through long-term relationships with customers and suppliers who value direct communication and consistent business support. Many of our relationships have developed over years of working together, understanding procurement requirements, and responding to changing material needs.
+                    Royale has grown through long-term relationships with customers and suppliers who value direct communication and consistent business support. Many of our relationships have developed over years of working together, understanding procurement requirements, and responding to changing material needs.
                   </p>
                   <p className="text-gray-300 font-sans leading-relaxed text-sm sm:text-base">
                     For us, polymer trading is not simply about completing an order. It is about becoming a reliable part of our customer's sourcing network.
@@ -684,10 +684,10 @@ export default function AboutPage() {
                     Looking Ahead
                   </span>
                   <h3 className="font-heading font-extrabold text-2xl text-white tracking-tight leading-tight">
-                    Building the Next Chapter of Royale Industries
+                    Building the Next Chapter of Royale
                   </h3>
                   <p className="text-gray-300 font-sans leading-relaxed text-sm">
-                    As India's manufacturing and polymer consumption landscape continues to evolve, Royale Industries remains focused on strengthening its sourcing network, expanding material access, and improving the experience of industrial procurement.
+                    As India's manufacturing and polymer consumption landscape continues to evolve, Royale remains focused on strengthening its sourcing network, expanding material access, and improving the experience of industrial procurement.
                   </p>
                   <p className="text-gray-300 font-sans leading-relaxed text-sm">
                     We continue to build on more than two decades of market experience while developing stronger supply relationships and more responsive sourcing processes. Our direction remains clear: to be a dependable polymer sourcing and supply partner for Indian industry.

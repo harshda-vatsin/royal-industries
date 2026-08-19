@@ -27,7 +27,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           subtitle={category.description}
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'Chemical Types', href: '/chemical-types' },
+            { label: 'Products', href: '/chemical-types' },
             { label: category.name, href: `/chemical-types/${category.id}` }
           ]}
         />
@@ -40,7 +40,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <aside className="lg:w-1/4 flex-shrink-0">
               <div className="sticky top-32 space-y-2">
                 <h3 className="font-heading font-bold text-sm uppercase tracking-widest text-gray-400 mb-4 px-4">
-                  Chemical Categories
+                  Product Categories
                 </h3>
                 <div className="flex flex-col space-y-1">
                   {allCategories.map((c) => (

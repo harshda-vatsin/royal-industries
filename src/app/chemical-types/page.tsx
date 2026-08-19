@@ -17,53 +17,71 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function ChemicalTypesPage() {
   const categories = getAllCategories();
+  const polymerPlastics = categories.filter((c) => c.group === 'polymer-plastics');
+  const chemicals = categories.filter((c) => c.group === 'chemicals');
+
+  const renderCategoryGrid = (items: typeof categories) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      {items.map((category) => (
+        <Link
+          href={`/chemical-types/${category.id}`}
+          key={category.id}
+          className="group block bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md hover:border-brand-blue-light transition-all duration-300"
+        >
+          <div className="flex items-center space-x-4 mb-6">
+            <div className="w-16 h-16 rounded-full bg-brand-blue-light/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-blue-light/20 transition-colors">
+              {iconMap[category.iconType] || <Layers className="w-8 h-8 text-brand-blue-light" />}
+            </div>
+            <div>
+              <h3 className="font-heading font-bold text-xl sm:text-2xl text-charcoal">
+                {category.name}
+              </h3>
+              <p className="text-sm font-semibold text-brand-blue-light uppercase tracking-wider mt-1">
+                {category.products.length} Products
+              </p>
+            </div>
+          </div>
+          <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 min-h-[4rem]">
+            {category.description}
+          </p>
+          <div className="flex items-center text-brand-blue-light font-bold text-sm uppercase tracking-wider group-hover:text-brand-blue transition-colors">
+            <span>View Products</span>
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1.5 transition-transform duration-300" />
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans text-charcoal">
       <Navbar />
 
       <main className="flex-grow">
-        <SubpageHero 
-          title="Chemical Types"
-          subtitle="High-performance specialty chemicals engineered for packaging, healthcare, coatings, foaming, and polymer applications."
+        <SubpageHero
+          title="Products"
+          subtitle="High-performance polymer plastics and specialty chemicals engineered for packaging, healthcare, coatings, foaming, and industrial applications."
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'Chemical Types', href: '/chemical-types' }
+            { label: 'Products', href: '/chemical-types' }
           ]}
         />
 
         {/* Categories Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {categories.map((category) => (
-                <Link
-                  href={`/chemical-types/${category.id}`}
-                  key={category.id}
-                  className="group block bg-white border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md hover:border-brand-blue-light transition-all duration-300"
-                >
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-16 h-16 rounded-full bg-brand-blue-light/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-blue-light/20 transition-colors">
-                      {iconMap[category.iconType] || <Layers className="w-8 h-8 text-brand-blue-light" />}
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-charcoal">
-                        {category.name}
-                      </h3>
-                      <p className="text-sm font-semibold text-brand-blue-light uppercase tracking-wider mt-1">
-                        {category.products.length} Products
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-8 min-h-[4rem]">
-                    {category.description}
-                  </p>
-                  <div className="flex items-center text-brand-blue-light font-bold text-sm uppercase tracking-wider group-hover:text-brand-blue transition-colors">
-                    <span>View Chemicals</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1.5 transition-transform duration-300" />
-                  </div>
-                </Link>
-              ))}
+          <div className="w-full space-y-20">
+            <div>
+              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-charcoal tracking-tight mb-8 border-b border-gray-100 pb-4">
+                Polymer Plastics
+              </h2>
+              {renderCategoryGrid(polymerPlastics)}
+            </div>
+
+            <div>
+              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-charcoal tracking-tight mb-8 border-b border-gray-100 pb-4">
+                Chemicals
+              </h2>
+              {renderCategoryGrid(chemicals)}
             </div>
           </div>
         </section>

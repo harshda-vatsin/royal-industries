@@ -45,7 +45,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
                   Industry Overview
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  The {industry.name.toLowerCase()} sector demands high-performance polymers and specialty additives to meet stringent safety, regulatory, and mechanical requirements. Royale Industries supplies a comprehensive portfolio of chemicals tailored specifically to enhance production efficiency and end-product quality in these environments.
+                  The {industry.name.toLowerCase()} sector demands high-performance polymers and specialty additives to meet stringent safety, regulatory, and mechanical requirements. Royale supplies a comprehensive portfolio of chemicals tailored specifically to enhance production efficiency and end-product quality in these environments.
                 </p>
                 <div className="bg-brand-soft-bg p-8 rounded-xl border border-brand-blue-light/20">
                   <h3 className="font-heading font-bold text-charcoal mb-4 flex items-center">

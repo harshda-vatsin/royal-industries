@@ -19,46 +19,27 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-const CASE_STUDIES = [
-  {
-    industry: 'Automotive Manufacturing',
-    challenge: 'Inconsistent polymer grades affecting the durability of molded auto components.',
-    solution: 'Supplied high-purity PVC K-67 with certified batch consistency and continuous availability.',
-    outcome: 'Reduced material rejection rate by 15% and streamlined production timelines.'
-  },
-  {
-    industry: 'Medical Devices',
-    challenge: 'Strict regulatory compliance required for IV bottle polymer compounds.',
-    solution: 'Sourced specialized Medical-Grade Copolymers with full manufacturer certification.',
-    outcome: 'Ensured 100% compliance with health standards and supported rapid scaling.'
-  },
-  {
-    industry: 'Flexible Packaging',
-    challenge: 'High waste generation due to inefficient film stretching during extrusion.',
-    solution: 'Recommended and supplied advanced LLDPE film grades optimized for flexibility.',
-    outcome: 'Improved film yield and reduced material waste by 12%.'
-  }
-];
-
 const TESTIMONIALS = [
   {
-    name: 'Rajeev Sharma',
     company: 'Apex Auto Components',
     industry: 'Automotive',
-    feedback: 'Royale Industries has been our trusted polymer supplier for over a decade. Their commitment to grade consistency is unmatched.'
+    feedback: 'Royale has been our trusted polymer supplier for over a decade. Their commitment to grade consistency is unmatched.'
   },
   {
-    name: 'Meera Patel',
     company: 'CareMed Plastics',
     industry: 'Healthcare',
     feedback: 'When we needed certified medical-grade polymers during a crunch, Royale delivered on time with perfect documentation.'
   },
   {
-    name: 'Anil Gupta',
     company: 'Prime Packaging Solutions',
     industry: 'Packaging',
     feedback: 'Their understanding of the polymer trade and direct communication makes procurement entirely stress-free for our team.'
   }
+];
+
+const CSR_PARTNERS = [
+  'Aggarwal Sabha Trust',
+  'LIONS BLOOD BANK, Shalimar Marg'
 ];
 
 export default function ResponsibilityPage() {
@@ -89,7 +70,7 @@ export default function ResponsibilityPage() {
                   Driving Industrial Growth with Integrity
                 </h2>
                 <p className="text-gray-600 font-sans leading-relaxed text-base sm:text-lg">
-                  At Royale Industries, our definition of success extends beyond business metrics and supply volumes. We believe that true industry leadership is defined by the positive impact we create for our people, our partners, and the communities we operate in.
+                  At Royale, our definition of success extends beyond business metrics and supply volumes. We believe that true industry leadership is defined by the positive impact we create for our people, our partners, and the communities we operate in.
                 </p>
                 <p className="text-gray-600 font-sans leading-relaxed text-base sm:text-lg">
                   For over two decades, our approach has been rooted in a deep sense of responsibility. Whether it's ensuring ethical sourcing, maintaining a safe workplace, or actively investing in social welfare, we are committed to building a legacy of trust and sustainable progress.
@@ -120,10 +101,10 @@ export default function ResponsibilityPage() {
                     Giving Back to Society
                   </span>
                   <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-charcoal tracking-tight leading-tight">
-                    Agrawal Sabha Trust
+                    Aggarwal Sabha Trust
                   </h2>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    At Royale Industries, we believe that true industrial growth must be accompanied by social responsibility. Through our CSR initiative with the <strong>Agrawal Sabha Trust</strong>, we actively contribute to the welfare of local communities.
+                    At Royale, we believe that true industrial growth must be accompanied by social responsibility. Through our CSR initiatives with the <strong>Aggarwal Sabha Trust</strong> and <strong>Lions Blood Bank, Shalimar Marg</strong>, we actively contribute to the welfare of local communities.
                   </p>
                   <ul className="space-y-4 pt-2">
                     {[
@@ -139,6 +120,21 @@ export default function ResponsibilityPage() {
                       </li>
                     ))}
                   </ul>
+                  <div className="pt-2">
+                    <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2.5">
+                      Our CSR Partners & Beneficiaries
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {CSR_PARTNERS.map((partner, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-flex items-center px-3 py-1.5 bg-white border border-gray-200 text-xs font-semibold text-charcoal rounded-full shadow-sm"
+                        >
+                          {partner}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   <div className="pt-4">
                     <Link href="/contact" className="inline-flex items-center space-x-2 text-brand-blue font-bold text-sm uppercase tracking-wider hover:text-brand-blue-light transition-colors group">
                       <span>Learn More About Our CSR</span>
@@ -198,11 +194,11 @@ export default function ResponsibilityPage() {
                 </div>
                 <div className="lg:w-2/3 space-y-4 text-center lg:text-left">
                   <div className="inline-block bg-brand-blue/20 border border-brand-blue/30 text-brand-blue-light px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
-                    Agrawal Sabha Trust (Since 1982)
+                    Aggarwal Sabha Trust (Since 1982)
                   </div>
                   <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">COVID-19 Response & Community Impact</h3>
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Driven by our long-standing commitment to social welfare through the Agrawal Sabha Trust, we rapidly responded to the global pandemic. We ensured the free distribution of masks by setting up an in-house manufacturing line. To meet urgent demand, critical machinery was airlifted directly from China, enabling us to commence full-scale production in just 15 days to protect our community.
+                    Driven by our long-standing commitment to social welfare through the Aggarwal Sabha Trust, we rapidly responded to the global pandemic. We ensured the free distribution of masks by setting up an in-house manufacturing line. To meet urgent demand, critical machinery was airlifted directly from China, enabling us to commence full-scale production in just 15 days to protect our community.
                   </p>
                 </div>
               </div>
@@ -222,36 +218,10 @@ export default function ResponsibilityPage() {
                   Customer Satisfaction
                 </h2>
                 <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                  Real-world examples of how Royale Industries drives manufacturing success.
+                  Real-world feedback on how Royale drives manufacturing success for our customers.
                 </p>
               </div>
             </ScrollPop>
-
-            <h3 className="font-heading font-bold text-2xl text-charcoal mb-8 border-b border-gray-100 pb-4">Case Studies</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-              {CASE_STUDIES.map((study, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm flex flex-col space-y-4 hover:shadow-md transition-shadow">
-                  <div className="inline-block bg-brand-soft-bg text-brand-blue px-3 py-1 rounded-full text-xs font-bold self-start">
-                    {study.industry}
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Challenge</h4>
-                    <p className="text-gray-700 text-sm leading-relaxed">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-1">Royale Solution</h4>
-                    <p className="text-gray-700 text-sm leading-relaxed">{study.solution}</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg mt-auto border border-gray-100">
-                    <h4 className="text-xs font-bold text-brand-green uppercase tracking-wider mb-1">Outcome</h4>
-                    <p className="text-gray-800 text-sm font-semibold">{study.outcome}</p>
-                  </div>
-                  <button className="text-brand-blue font-bold text-sm text-left hover:text-brand-blue-light transition-colors mt-2">
-                    Read More &rarr;
-                  </button>
-                </div>
-              ))}
-            </div>
 
             <h3 className="font-heading font-bold text-2xl text-charcoal mb-8 border-b border-gray-100 pb-4">Client Testimonials</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -270,7 +240,6 @@ export default function ResponsibilityPage() {
                       "{testimonial.feedback}"
                     </p>
                     <div className="pt-4">
-                      <p className="font-bold text-white font-heading">{testimonial.name}</p>
                       <p className="text-xs text-brand-interactive">{testimonial.company} • {testimonial.industry}</p>
                     </div>
                   </div>
@@ -295,7 +264,10 @@ export default function ResponsibilityPage() {
                 { title: 'Quality Assurance', desc: 'Supplying certified, batch-tested polymers from trusted global producers.' },
                 { title: 'Ethical Business', desc: 'Maintaining transparency, integrity, and fair practices in every transaction.' },
                 { title: 'Sustainable Growth', desc: 'Focusing on environmentally conscious strategies and resource efficiency.' },
-                { title: 'Long-Term Partnerships', desc: 'Building relationships based on reliability rather than mere transactions.' }
+                { title: 'Long-Term Partnerships', desc: 'Building relationships based on reliability rather than mere transactions.' },
+                { title: 'Timely Delivery', desc: 'Coordinating logistics to meet delivery windows customers can depend on.' },
+                { title: 'Best Price', desc: 'Delivering competitive wholesale pricing through direct sourcing relationships.' },
+                { title: 'Technical Review', desc: 'Reviewing material documentation and grade specifications with every order.' }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white rounded-xl p-8 text-center space-y-4 border border-[#C4DBF5] shadow-sm hover:border-brand-blue hover:shadow-md transition-all duration-300 group">
                   <div className="w-16 h-16 mx-auto bg-brand-blue/5 rounded-full flex items-center justify-center group-hover:bg-brand-blue transition-colors duration-300">

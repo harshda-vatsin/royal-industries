@@ -15,6 +15,7 @@ export interface ChemicalCategory {
   subtitle: string;
   description: string;
   iconType: string;
+  group: 'polymer-plastics' | 'chemicals';
   products: ChemicalProduct[];
 }
 
@@ -25,6 +26,7 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
     subtitle: 'Polyvinyl Chloride (PVC)',
     description: 'High-purity suspension and compounding PVC resins offering exceptional mechanical properties, chemical safety, and batch consistency.',
     iconType: 'layers',
+    group: 'polymer-plastics',
     products: [
       {
         id: 'pvc-k67',
@@ -52,12 +54,13 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
     subtitle: 'Polyethylene (PE)',
     description: 'Versatile Polyethylene raw materials including LDPE, LLDPE, and HDPE, offering transparency, strength, and chemical resistance.',
     iconType: 'box',
+    group: 'polymer-plastics',
     products: [
       {
         id: 'ldpe-film',
         name: 'LDPE Film Grade',
         purpose: 'Low Density Polyethylene with excellent optical transparency and flexibility.',
-        applications: ['General purpose blown packaging films', 'POPP film packaging', 'CPP laminated base sheets'],
+        applications: ['General purpose blown packaging films', 'BOPP film packaging', 'CPP laminated base sheets'],
         benefits: ['Optical transparency', 'High flexibility', 'Heat-seal capabilities'],
         usedInIndustries: ['packaging', 'popp', 'cpp'],
         datasheetAvailable: true,
@@ -66,7 +69,7 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
         id: 'lldpe-film',
         name: 'LLDPE Blown Film Grade',
         purpose: 'Linear Low Density Polyethylene featuring outstanding puncture resistance.',
-        applications: ['High-strength retail packaging stretch films', 'POPP packaging laminates', 'CPP co-extruded films'],
+        applications: ['High-strength retail packaging stretch films', 'BOPP packaging laminates', 'CPP co-extruded films'],
         benefits: ['Puncture resistance', 'High tear strength', 'Tensile durability'],
         usedInIndustries: ['packaging', 'popp', 'cpp'],
         datasheetAvailable: true,
@@ -88,6 +91,7 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
     subtitle: 'Ethylene-Vinyl Acetate (EVA)',
     description: 'Specialty EVA granules curated for manufacturing segments that require high flexibility, low-temperature toughness, and stress-crack resistance.',
     iconType: 'cloud',
+    group: 'polymer-plastics',
     products: [
       {
         id: 'eva-va18',
@@ -115,6 +119,7 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
     subtitle: 'Specialty Polypropylene',
     description: 'High melt flow polypropylene polymer designed specifically for meltblown nonwoven processes with excellent filtration efficiency.',
     iconType: 'heart',
+    group: 'polymer-plastics',
     products: [
       {
         id: 'pp-meltblown',
@@ -133,6 +138,7 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
     subtitle: 'Healthcare Copolymer Grade',
     description: 'High-purity copolymer compounds offering low-temperature toughness, sterilization safety, and structural longevity.',
     iconType: 'file',
+    group: 'polymer-plastics',
     products: [
       {
         id: 'medical-copolymer',
@@ -141,6 +147,25 @@ export const CHEMICALS_DATA: Record<string, ChemicalCategory> = {
         applications: ['CPAP mask and medical device components', 'Automotive cable conduits'],
         benefits: ['Low-temperature toughness', 'Sterilization safety', 'Structural longevity'],
         usedInIndustries: ['healthcare', 'automotive'],
+        datasheetAvailable: false,
+      }
+    ]
+  },
+  'chemicals': {
+    id: 'chemicals',
+    name: 'Chemicals',
+    subtitle: 'Industrial & Specialty Chemicals',
+    description: 'Royale is expanding into industrial and specialty chemicals. Full product specifications will be published soon — contact our sourcing team for current availability.',
+    iconType: 'file',
+    group: 'chemicals',
+    products: [
+      {
+        id: 'chemicals-placeholder',
+        name: 'Product Line Coming Soon',
+        purpose: 'Detailed specifications for this chemical line are being finalized.',
+        applications: ['Contact our sourcing team for current availability'],
+        benefits: ['Placeholder entry — full product data to be added'],
+        usedInIndustries: [],
         datasheetAvailable: false,
       }
     ]

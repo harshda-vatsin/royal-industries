@@ -166,7 +166,7 @@ export default function HeroSection() {
                 <span className="block text-xs sm:text-sm uppercase font-bold text-slate-300/80 tracking-wider">Sourcing Depth</span>
               </div>
               <div>
-                <span className="block font-sans font-bold text-3xl sm:text-4xl text-[#F8FAFC]">35k MT+</span>
+                <span className="block font-sans font-bold text-3xl sm:text-4xl text-[#F8FAFC]">40k MT+</span>
                 <span className="block text-xs sm:text-sm uppercase font-bold text-slate-300/80 tracking-wider">Annual Delivery</span>
               </div>
               <div>
@@ -184,18 +184,23 @@ export default function HeroSection() {
                 <span>REQUEST A QUOTE</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <div className="bg-white/5 border border-white/25 backdrop-blur-sm text-white text-sm sm:text-base font-bold flex-1 px-4 sm:px-6 py-3 min-h-[72px] flex items-center justify-center space-x-3 rounded-sm">
-                <span className="bg-white rounded-sm px-3 py-2 flex-shrink-0 inline-flex items-center">
-                  <Image
-                    src="/images/logo_lyondellbasell.png"
-                    alt="LyondellBasell"
-                    width={262}
-                    height={80}
-                    unoptimized
-                    className="h-8 w-auto object-contain"
-                  />
-                </span>
-                <span className="uppercase tracking-widest leading-tight">Authorized Distributor</span>
+            </div>
+
+            {/* Authorized Distributor Banner */}
+            <div className="mt-5 w-full sm:max-w-[760px] bg-white/8 border border-brand-interactive/50 backdrop-blur-sm rounded-sm px-6 py-4 flex items-center gap-5 shadow-lg">
+              <span className="bg-white rounded-sm px-4 py-2.5 flex-shrink-0 inline-flex items-center">
+                <Image
+                  src="/images/logo_lyondellbasell.png"
+                  alt="LyondellBasell"
+                  width={320}
+                  height={96}
+                  unoptimized
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
+              </span>
+              <div className="flex flex-col">
+                <span className="text-white text-sm sm:text-base font-extrabold uppercase tracking-widest leading-tight">Authorized Distributor</span>
+                <span className="text-brand-interactive text-xs sm:text-sm font-semibold">LyondellBasell Polymer Grades</span>
               </div>
             </div>
 

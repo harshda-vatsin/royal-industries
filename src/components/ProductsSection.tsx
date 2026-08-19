@@ -20,7 +20,7 @@ const PRODUCTS = [
     ],
     image: '/pvc_resins.jpg',
     icon: Layers,
-    technicalLink: '/segments?type=pvc',
+    technicalLink: '/chemical-types/pvc',
   },
   {
     id: 'pe-granules',
@@ -35,7 +35,7 @@ const PRODUCTS = [
     ],
     image: '/pe_granules.jpg',
     icon: Activity,
-    technicalLink: '/segments?type=pe',
+    technicalLink: '/chemical-types/pe',
   },
   {
     id: 'eva-granules',
@@ -50,7 +50,7 @@ const PRODUCTS = [
     ],
     image: '/eva_granules.webp',
     icon: ShieldAlert,
-    technicalLink: '/segments?type=eva',
+    technicalLink: '/chemical-types/eva',
   },
 ];
 

@@ -44,7 +44,7 @@ export default function QASection() {
         <SectionHeader
           tag="Zero-Defect Commitment"
           title="Quality Assurance & Sourcing Standards"
-          description="Royale Industries ensures that bulk polymer raw materials are sourced from reputable producers under strict documentation and batch verification standards."
+          description="Royale ensures that bulk polymer raw materials are sourced from reputable producers under strict documentation and batch verification standards."
           lightBg={true}
         />
 
@@ -102,7 +102,7 @@ export default function QASection() {
             <div className="relative group overflow-hidden bg-charcoal aspect-[4/3] shadow-md rounded-sm">
               <Image
                 src="/polymer_testing.jpg"
-                alt="Royale Industries material supply operations"
+                alt="Royale material supply operations"
                 fill
                 sizes="(max-width: 1024px) 100vw, 35vw"
                 className="object-cover zoom-on-hover"

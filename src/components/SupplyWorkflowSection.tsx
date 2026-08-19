@@ -31,7 +31,7 @@ const STEPS = [
     step: '04',
     title: 'Global Sourcing & Import',
     subtitle: 'Supply Chain Sourcing',
-    description: 'Royale Industries coordinates global purchasing paths, custom clearances, and ocean transport lines to import plastic granules directly from reliable chemical producers.',
+    description: 'Royale coordinates global purchasing paths, custom clearances, and ocean transport lines to import plastic granules directly from reliable chemical producers.',
     icon: Globe,
   },
   {
@@ -72,7 +72,7 @@ export default function SupplyWorkflowSection() {
         <SectionHeader
           tag="Our Workflow"
           title="Sourcing & Supply Workflow"
-          description="From initial requirement alignment to nationwide B2B delivery, Royale Industries manages a secure, professional procurement process to ensure material consistency."
+          description="From initial requirement alignment to nationwide B2B delivery, Royale manages a secure, professional procurement process to ensure material consistency."
           lightBg={false}
         />
 

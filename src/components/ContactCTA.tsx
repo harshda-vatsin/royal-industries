@@ -43,7 +43,7 @@ export default function ContactCTA() {
               <span className="text-white">Let&apos;s Connect Today.</span>
             </h2>
             <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl font-sans font-light">
-              Sourcing specialized polymer raw materials in bulk from established global producers. Partner with Royale Industries for consistent grade supplies, competitive pricing, and reliable delivery services.
+              Sourcing specialized polymer raw materials in bulk from established global producers. Partner with Royale for consistent grade supplies, competitive pricing, and reliable delivery services.
             </p>
           </div>
 

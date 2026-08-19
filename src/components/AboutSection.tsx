@@ -3,13 +3,15 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import ScrollPop from './ScrollPop';
-import { Award, Target, Users, MapPin } from 'lucide-react';
+import { Award, Target, Users, MapPin, Globe, Truck } from 'lucide-react';
 
 const STATS = [
   { label: 'Years of Experience', value: 21, suffix: '+', icon: Award },
-  { label: 'Delivered Annually', value: 35000, suffix: '+ MT', icon: Target },
+  { label: 'Delivered Annually', value: 40000, suffix: '+ MT', icon: Target },
   { label: 'Customers Served', value: 600, suffix: '+', icon: Users },
   { label: 'Supply & Delivery', value: 100, suffix: '', icon: MapPin, textValue: 'PAN India' },
+  { label: 'Global Supply', value: 100, suffix: '', icon: Globe, textValue: 'Worldwide' },
+  { label: '24-Hour PAN India Delivery', value: 100, suffix: '', icon: Truck, textValue: '24-Hour' },
 ];
 
 export default function AboutSection() {
@@ -93,7 +95,7 @@ export default function AboutSection() {
                     Established in May 2004, Royale Industries Pvt. Ltd. is a New Delhi-based importer, trader and supplier of polymer and plastic raw materials. With more than two decades of industry experience, we provide customers with access to a wide variety of polymer grades, including grades sourced to meet specific application requirements.
                   </p>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    Today, Royale Industries delivers approximately 35,000 MT of material annually and serves more than 600 customers across India. Our portfolio supports applications across packaging, healthcare, foaming, BOPP, CPP and automotive segments, backed by responsive logistics and PAN-India delivery capabilities.
+                    Today, Royale delivers approximately 40,000 MT of material annually and serves more than 600 customers across India. Our portfolio supports applications across packaging, healthcare, foaming, BOPP, CPP and automotive segments, backed by responsive logistics and PAN-India delivery capabilities.
                   </p>
                 </div>
               </div>
@@ -106,7 +108,7 @@ export default function AboutSection() {
       {/* 2. Scroll Snapping Statistics Section */}
       <section ref={statsRef} className="py-20 lg:py-24 bg-brand-blue snap-align-start" id="about-stats">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {STATS.map((stat, idx) => {
               const Icon = stat.icon;
               return (

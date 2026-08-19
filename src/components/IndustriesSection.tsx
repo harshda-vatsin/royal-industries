@@ -12,28 +12,28 @@ const MATERIALS = [
     title: 'PVC Resins',
     description: 'Polyvinyl Chloride raw materials sourced from leading global producers. Offering high-quality suspension and emulsion grades suitable for electrical wire cabling, industrial pipes, and flexible profile extrusion.',
     image: '/pvc_resins.jpg',
-    link: '/segments?type=pvc',
+    link: '/chemical-types/pvc',
   },
   {
     id: 'pe',
     title: 'PE Granules',
     description: 'Polyethylene granules including LDPE, LLDPE, and HDPE grades. These materials feature high chemical resistance, excellent puncture strength, and structural versatility, making them ideal for packaging films and molding.',
     image: '/pe_granules.jpg',
-    link: '/segments?type=pe',
+    link: '/chemical-types/pe',
   },
   {
     id: 'eva',
     title: 'EVA Granules',
     description: 'Ethylene-Vinyl Acetate copolymers offering superior flexibility, low-temperature toughness, and stress-crack resistance. Extremely well-suited for footwear midsoles, foam insulation sheets, and hot-melt adhesives.',
     image: '/eva_granules.webp',
-    link: '/segments?type=eva',
+    link: '/chemical-types/eva',
   },
   {
     id: 'healthcare',
     title: 'Healthcare Polymers',
     description: 'Medical-grade polymer resins and copolymers sourced for pharmaceutical and healthcare manufacturing. Our grades support IV bottles, surgical mask meltblown filters, CPAP components, and sterilizable device housings.',
     image: '/healthcare_polymers.jpg',
-    link: '/segments?type=healthcare',
+    link: '/applications/healthcare',
   },
 ];
 
