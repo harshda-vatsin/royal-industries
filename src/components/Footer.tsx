@@ -169,7 +169,7 @@ export default function Footer() {
       <div className="bg-charcoal-dark border-t border-charcoal-light py-6 px-4 sm:px-6 lg:px-12 xl:px-16 text-xs text-gray-500">
         <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div>
-            <span>© 2026 Royale Industries. All rights reserved.</span>
+            <span>© 2026 Royale. All rights reserved.</span>
           </div>
           <div className="flex space-x-6">
             <Link href="/terms" className="hover:text-brand-blue transition-colors">Terms of Service</Link>

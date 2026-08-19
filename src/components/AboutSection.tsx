@@ -92,7 +92,7 @@ export default function AboutSection() {
                     More than Two Decades of Polymer Sourcing Expertise
                   </h2>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    Established in May 2004, Royale Industries Pvt. Ltd. is a New Delhi-based importer, trader and supplier of polymer and plastic raw materials. With more than two decades of industry experience, we provide customers with access to a wide variety of polymer grades, including grades sourced to meet specific application requirements.
+                    Established in May 2004, Royale is a New Delhi-based importer, trader and supplier of polymer and plastic raw materials. With more than two decades of industry experience, we provide customers with access to a wide variety of polymer grades, including grades sourced to meet specific application requirements.
                   </p>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
                     Today, Royale delivers approximately 40,000 MT of material annually and serves more than 600 customers across India. Our portfolio supports applications across packaging, healthcare, foaming, BOPP, CPP and automotive segments, backed by responsive logistics and PAN-India delivery capabilities.

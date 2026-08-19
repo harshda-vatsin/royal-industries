@@ -74,7 +74,7 @@ export default function AboutPage() {
                   </h2>
                   
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    Established in May 2004, Royale Industries Pvt. Ltd. is a New Delhi-based polymer trading, sourcing, and supply company serving manufacturers and industrial buyers across India.
+                    Established in May 2004, Royale is a New Delhi-based polymer trading, sourcing, and supply company serving manufacturers and industrial buyers across India.
                   </p>
                   
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
