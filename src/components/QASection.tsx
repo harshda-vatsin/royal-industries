@@ -31,8 +31,6 @@ const TESTS = [
   'Melt Flow Index Parameter Matching',
   'Batch-to-Batch Traceability Logs',
   'Supplier Document Verification',
-  'MSDS & TDS Documentation Coordination',
-  'Compliance & Safety Disclosures',
 ];
 
 export default function QASection() {
