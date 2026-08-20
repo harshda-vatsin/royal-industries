@@ -48,14 +48,14 @@ export default function RFQSection() {
                   <MapPin className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
                   <div>
                     <span className="block font-bold text-charcoal mb-0.5">Corporate Address</span>
-                    <p className="leading-relaxed">Unit 302, Crown Heights, Plot 3B1, Twin District Centre, Sector-10, Rohini, New Delhi 110085</p>
+                    <p className="leading-relaxed">302, Crown Heights, Hotel Crown Plaza, Sector-10, Rohini, New Delhi - 110 085 (INDIA)</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3.5">
                   <Phone className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
                   <div>
                     <span className="block font-bold text-charcoal mb-0.5">Contact</span>
-                    <p className="leading-relaxed">+91 98998 53399</p>
+                    <p className="leading-relaxed">+91 98998 53399 (GSM) | +91 11 27055302 (TF)</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3.5">

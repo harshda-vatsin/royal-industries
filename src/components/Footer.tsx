@@ -134,7 +134,7 @@ export default function Footer() {
               <div className="flex items-start space-x-2.5">
                 <MapPin className="w-4 h-4 text-brand-blue mt-1 flex-shrink-0" />
                 <span className="leading-normal text-xs">
-                  Unit 302, Crown Heights, Plot 3B1, Twin District Centre, Sector-10, Rohini, New Delhi 110085
+                  302, Crown Heights, Hotel Crown Plaza, Sector-10, Rohini, New Delhi - 110 085 (INDIA)
                 </span>
               </div>
               <div className="flex items-center space-x-2.5">
@@ -144,6 +144,10 @@ export default function Footer() {
               <div className="flex items-center space-x-2.5">
                 <Phone className="w-4 h-4 text-brand-blue flex-shrink-0" />
                 <a href="tel:+919899853399" className="hover:text-brand-blue transition-colors">+91 98998 53399 (Mr. Neeraj Aggarwal)</a>
+              </div>
+              <div className="flex items-center space-x-2.5">
+                <Phone className="w-4 h-4 text-brand-blue flex-shrink-0" />
+                <a href="tel:+911127055302" className="hover:text-brand-blue transition-colors">+91 11 27055302 (TF)</a>
               </div>
 
               {/* Mini Map Placeholder */}
