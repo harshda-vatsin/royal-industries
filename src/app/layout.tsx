@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   },
 };
 
+import FloatingQuoteButton from "@/components/FloatingQuoteButton";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,6 +41,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans text-charcoal bg-white">
         {children}
+        <FloatingQuoteButton />
       </body>
     </html>
   );

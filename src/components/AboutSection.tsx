@@ -10,7 +10,7 @@ const STATS = [
   { label: 'Delivered Annually', value: 40000, suffix: '+ MT', icon: Target },
   { label: 'Customers Served', value: 600, suffix: '+', icon: Users },
   { label: 'Supply & Delivery', value: 100, suffix: '', icon: MapPin, textValue: 'PAN India' },
-  { label: 'Global Supply', value: 100, suffix: '', icon: Globe, textValue: 'Worldwide' },
+  { label: 'Trusted Polymer Sourcing', value: 100, suffix: '', icon: Globe, textValue: 'Worldwide' },
   { label: '24-Hour PAN India Delivery', value: 100, suffix: '', icon: Truck, textValue: '24-Hour' },
 ];
 

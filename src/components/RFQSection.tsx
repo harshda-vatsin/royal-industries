@@ -38,7 +38,7 @@ export default function RFQSection() {
           <div className="lg:col-span-5 flex flex-col gap-8">
             
             {/* Info Block */}
-            <div className="bg-white border border-gray-200 p-8 rounded-sm space-y-6 shadow-sm">
+            <div className="bg-white border border-gray-200 p-8 rounded-sm space-y-6 shadow-sm h-full">
               <h3 className="font-heading font-extrabold text-lg text-charcoal tracking-tight border-b border-gray-200 pb-3">
                 New Delhi Corporate Office
               </h3>
@@ -54,8 +54,8 @@ export default function RFQSection() {
                 <div className="flex items-start space-x-3.5">
                   <Phone className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
                   <div>
-                    <span className="block font-bold text-charcoal mb-0.5">Telephone Coordinates</span>
-                    <p className="leading-relaxed">+91-11-46200000 | +91-11-46200001</p>
+                    <span className="block font-bold text-charcoal mb-0.5">Contact</span>
+                    <p className="leading-relaxed">+91 98998 53399</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3.5">
@@ -77,37 +77,7 @@ export default function RFQSection() {
               </div>
             </div>
 
-            {/* Key Contact */}
-            <div className="bg-white border border-gray-200 p-8 rounded-sm space-y-4 shadow-sm">
-              <h3 className="font-heading font-extrabold text-lg text-charcoal tracking-tight border-b border-gray-200 pb-3">
-                Key Contact
-              </h3>
-              <div className="flex items-start space-x-3.5 text-xs sm:text-sm text-gray-500 font-sans">
-                <Users className="w-5 h-5 text-brand-blue mt-0.5 flex-shrink-0" />
-                <div>
-                  <span className="block font-bold text-charcoal mb-0.5">Mr. Neeraj</span>
-                  <p className="leading-relaxed text-gray-400 italic">[Designation, phone, and email to be added]</p>
-                </div>
-              </div>
-            </div>
 
-            {/* Map Placeholder */}
-            <div className="w-full flex-1 min-h-72 bg-white border border-gray-200 rounded-sm overflow-hidden relative group shadow-sm">
-              <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-40"></div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                <MapPin className="w-8 h-8 text-brand-blue mb-2 group-hover:bounce transition-all duration-300" />
-                <span className="text-xs uppercase font-bold tracking-wider text-charcoal">Royale</span>
-                <span className="text-xs text-gray-400 mt-1 max-w-[80%]">Unit 302, Crown Heights, Plot 3B1, Twin District Centre, Sector-10, Rohini, New Delhi 110085</span>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center space-x-1.5 bg-charcoal hover:bg-brand-blue text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm transition-colors"
-                >
-                  <span>Get Directions</span>
-                </a>
-              </div>
-            </div>
 
           </div>
 

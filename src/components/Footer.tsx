@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, ArrowRight, Phone } from 'lucide-react';
 
 export default function Footer() {
 
@@ -140,6 +140,10 @@ export default function Footer() {
               <div className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-brand-blue flex-shrink-0" />
                 <a href="mailto:office@royaleind.in" className="hover:text-brand-blue transition-colors">office@royaleind.in</a>
+              </div>
+              <div className="flex items-center space-x-2.5">
+                <Phone className="w-4 h-4 text-brand-blue flex-shrink-0" />
+                <a href="tel:+919899853399" className="hover:text-brand-blue transition-colors">+91 98998 53399 (Mr. Neeraj Aggarwal)</a>
               </div>
 
               {/* Mini Map Placeholder */}

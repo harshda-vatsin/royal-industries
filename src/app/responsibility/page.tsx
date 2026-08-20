@@ -82,10 +82,9 @@ export default function ResponsibilityPage() {
         
         {/* Section 1: Community Initiatives */}
         <section className="py-24 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 space-y-24">
             <ScrollPop>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
                 {/* Left: Illustration Placeholder */}
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-brand-soft-bg flex items-center justify-center border border-gray-100 shadow-sm">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.1),transparent_70%)]" />
@@ -95,7 +94,7 @@ export default function ResponsibilityPage() {
                   </div>
                 </div>
 
-                {/* Right: Content */}
+                {/* Right: Aggarwal Sabha Trust */}
                 <div className="space-y-6">
                   <span className="text-xs font-bold uppercase tracking-widest text-brand-blue border-l-2 border-brand-blue pl-2.5">
                     Giving Back to Society
@@ -104,7 +103,7 @@ export default function ResponsibilityPage() {
                     Aggarwal Sabha Trust
                   </h2>
                   <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
-                    At Royale, we believe that true industrial growth must be accompanied by social responsibility. Through our CSR initiatives with the <strong>Aggarwal Sabha Trust</strong> and <strong>Lions Blood Bank, Shalimar Marg</strong>, we actively contribute to the welfare of local communities.
+                    At Royale, we believe that true industrial growth must be accompanied by social responsibility. Through our ongoing CSR initiatives with the <strong>Aggarwal Sabha Trust</strong>, we actively contribute to the sustained welfare and empowerment of our local communities.
                   </p>
                   <ul className="space-y-4 pt-2">
                     {[
@@ -112,7 +111,7 @@ export default function ResponsibilityPage() {
                       'Healthcare initiatives providing medical support to vulnerable groups.',
                       'Long-term commitment to community infrastructure and welfare.'
                     ].map((item, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
+                      <li key={`aggarwal-${idx}`} className="flex items-start space-x-3">
                         <div className="mt-1 bg-brand-green/10 p-1 rounded-full text-brand-green">
                           <HeartHandshake className="w-4 h-4" />
                         </div>
@@ -120,29 +119,47 @@ export default function ResponsibilityPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="pt-2">
-                    <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2.5">
-                      Our CSR Partners & Beneficiaries
-                    </span>
-                    <div className="flex flex-wrap gap-2">
-                      {CSR_PARTNERS.map((partner, idx) => (
-                        <span
-                          key={idx}
-                          className="inline-flex items-center px-3 py-1.5 bg-white border border-gray-200 text-xs font-semibold text-charcoal rounded-full shadow-sm"
-                        >
-                          {partner}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="pt-4">
-                    <Link href="/contact" className="inline-flex items-center space-x-2 text-brand-blue font-bold text-sm uppercase tracking-wider hover:text-brand-blue-light transition-colors group">
-                      <span>Learn More About Our CSR</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
+                </div>
+              </div>
+            </ScrollPop>
+
+            <ScrollPop>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                {/* Left: Lions Blood Bank */}
+                <div className="space-y-6">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#e11d48] border-l-2 border-[#e11d48] pl-2.5">
+                    Health & Wellness
+                  </span>
+                  <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-charcoal tracking-tight leading-tight">
+                    Lions Blood Bank
+                  </h2>
+                  <p className="text-gray-600 font-sans leading-relaxed text-sm sm:text-base">
+                    Our partnership with the <strong>Lions Blood Bank, Shalimar Marg</strong> reflects our commitment to life-saving healthcare initiatives. We actively organize and support regular blood donation camps to ensure steady supplies for medical emergencies and ongoing care.
+                  </p>
+                  <ul className="space-y-4 pt-2">
+                    {[
+                      'Facilitating voluntary blood donation drives across the local community.',
+                      'Providing logistical and promotional support to maximize donor turnout.',
+                      'Raising awareness about the critical need for safe blood transfusion.'
+                    ].map((item, idx) => (
+                      <li key={`lions-${idx}`} className="flex items-start space-x-3">
+                        <div className="mt-1 bg-red-50 p-1 rounded-full text-red-500">
+                          <Activity className="w-4 h-4" />
+                        </div>
+                        <span className="text-gray-600 text-sm sm:text-base leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
+                {/* Right: Illustration Placeholder */}
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-red-50 flex items-center justify-center border border-red-100 shadow-sm">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(225,29,72,0.1),transparent_70%)]" />
+                  <Droplet className="w-32 h-32 text-red-400/40" />
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-4 rounded-lg border border-white">
+                    <p className="text-sm font-bold text-red-500 text-center">Health & Life-Saving Drives</p>
+                  </div>
+                </div>
               </div>
             </ScrollPop>
           </div>
@@ -239,9 +256,6 @@ export default function ResponsibilityPage() {
                     <p className="text-gray-200 text-sm leading-relaxed italic border-l-2 border-brand-interactive pl-4">
                       "{testimonial.feedback}"
                     </p>
-                    <div className="pt-4">
-                      <p className="text-xs text-brand-interactive">{testimonial.company} • {testimonial.industry}</p>
-                    </div>
                   </div>
                 </div>
               ))}
@@ -267,7 +281,8 @@ export default function ResponsibilityPage() {
                 { title: 'Long-Term Partnerships', desc: 'Building relationships based on reliability rather than mere transactions.' },
                 { title: 'Timely Delivery', desc: 'Coordinating logistics to meet delivery windows customers can depend on.' },
                 { title: 'Best Price', desc: 'Delivering competitive wholesale pricing through direct sourcing relationships.' },
-                { title: 'Technical Review', desc: 'Reviewing material documentation and grade specifications with every order.' }
+                { title: 'Technical Review', desc: 'Reviewing material documentation and grade specifications with every order.' },
+                { title: 'Dedicated Support', desc: 'Providing personalized assistance and rapid responses to all your inquiries.' }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white rounded-xl p-8 text-center space-y-4 border border-[#C4DBF5] shadow-sm hover:border-brand-blue hover:shadow-md transition-all duration-300 group">
                   <div className="w-16 h-16 mx-auto bg-brand-blue/5 rounded-full flex items-center justify-center group-hover:bg-brand-blue transition-colors duration-300">

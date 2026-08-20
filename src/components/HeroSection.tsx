@@ -96,7 +96,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#061a33] flex flex-col justify-center min-h-[calc(100vh-110px)] py-8 sm:py-10 lg:py-14 snap-align-start">
+    <section className="relative w-full overflow-hidden bg-[#061a33] flex flex-col justify-center min-h-[calc(100vh-110px)] py-4 sm:py-6 lg:py-8 snap-align-start">
 
       {/* Background Video - kept sharp and photographic */}
       <div className="absolute inset-0 z-0">
@@ -146,21 +146,21 @@ export default function HeroSection() {
         <div className="w-full grid grid-cols-1 justify-items-start">
 
           {/* Left Column: B2B Sourcing Narrative */}
-          <div className="w-full max-w-3xl lg:max-w-5xl mx-0 flex flex-col text-left items-start animate-fade-in-up mt-6 sm:mt-8 lg:mt-12">
+          <div className="w-full max-w-3xl lg:max-w-5xl mx-0 flex flex-col text-left items-start animate-fade-in-up mt-4 sm:mt-6 lg:mt-8">
 
             {/* Main Heading */}
-            <h1 className="font-sans font-extrabold text-3xl sm:text-4xl lg:text-6xl text-[#F8FAFC] tracking-tight leading-[1.15]">
-              <span className="block whitespace-nowrap">More Than Two Decades of</span>
+            <h1 className="font-sans font-extrabold text-3xl sm:text-4xl lg:text-5xl text-[#F8FAFC] tracking-tight leading-[1.15]">
+              <span className="block whitespace-nowrap">Two Decades of</span>
               <span className="block whitespace-nowrap">Reliable <span className="text-brand-interactive">Polymer Supply</span>.</span>
             </h1>
 
             {/* Subheading */}
-            <p className="mt-5 font-sans font-semibold text-lg sm:text-xl text-white max-w-2xl leading-relaxed">
-              Identifying the right polymer grade according to your product and application needs.
+            <p className="mt-3 font-sans font-semibold text-lg sm:text-xl text-white max-w-2xl leading-relaxed">
+              Identifying the ideal polymer grade for your needs.
             </p>
 
             {/* Stats Highlights Grid */}
-            <div className="grid grid-cols-3 gap-6 mt-12 font-sans w-full">
+            <div className="grid grid-cols-3 gap-6 mt-6 font-sans w-full">
               <div>
                 <span className="block font-sans font-bold text-3xl sm:text-4xl text-[#F8FAFC]">21+ Yrs</span>
                 <span className="block text-xs sm:text-sm uppercase font-bold text-slate-300/80 tracking-wider">Sourcing Depth</span>
@@ -175,33 +175,33 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch gap-4 font-sans mt-8 w-full sm:max-w-[760px]">
+            {/* Action Buttons & Banner Row */}
+            <div className="flex flex-col md:flex-row items-stretch md:items-stretch gap-4 font-sans mt-6 w-full sm:max-w-2xl lg:max-w-3xl">
+              {/* Authorized Distributor Banner */}
+              <div className="flex-1 bg-white/8 border border-brand-interactive/50 backdrop-blur-sm rounded-sm px-6 py-3 flex items-center justify-center gap-4 shadow-lg min-h-[72px] md:min-h-[64px]">
+                <span className="bg-white rounded-sm px-3 py-1.5 flex-shrink-0 inline-flex items-center">
+                  <Image
+                    src="/images/logo_lyb_small.png"
+                    alt="LyondellBasell"
+                    width={40}
+                    height={40}
+                    unoptimized
+                    className="h-8 sm:h-10 w-auto object-contain"
+                  />
+                </span>
+                <div className="flex flex-col">
+                  <span className="text-white text-sm font-extrabold uppercase tracking-widest leading-tight">Authorized Distributor</span>
+                  <span className="text-brand-interactive text-xs sm:text-sm font-semibold">LyondellBasell Polymer Grades</span>
+                </div>
+              </div>
+
               <Link
                 href="/#rfq"
-                className="bg-brand-blue hover:bg-brand-blue-dark text-white text-sm sm:text-base font-bold uppercase tracking-widest flex-1 min-h-[72px] py-3 px-6 flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg rounded-sm cursor-pointer"
+                className="flex-1 bg-brand-blue hover:bg-brand-blue-dark text-white text-base sm:text-lg lg:text-xl font-bold uppercase tracking-widest min-h-[72px] md:min-h-[64px] py-3 px-6 flex items-center justify-center space-x-2 transition-all duration-300 shadow-lg rounded-sm cursor-pointer whitespace-nowrap"
               >
                 <span>REQUEST A QUOTE</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 sm:w-6 h-5 sm:h-6" />
               </Link>
-            </div>
-
-            {/* Authorized Distributor Banner */}
-            <div className="mt-5 w-full sm:max-w-[760px] bg-white/8 border border-brand-interactive/50 backdrop-blur-sm rounded-sm px-6 py-4 flex items-center gap-5 shadow-lg">
-              <span className="bg-white rounded-sm px-4 py-2.5 flex-shrink-0 inline-flex items-center">
-                <Image
-                  src="/images/logo_lyondellbasell.png"
-                  alt="LyondellBasell"
-                  width={320}
-                  height={96}
-                  unoptimized
-                  className="h-10 sm:h-12 w-auto object-contain"
-                />
-              </span>
-              <div className="flex flex-col">
-                <span className="text-white text-sm sm:text-base font-extrabold uppercase tracking-widest leading-tight">Authorized Distributor</span>
-                <span className="text-brand-interactive text-xs sm:text-sm font-semibold">LyondellBasell Polymer Grades</span>
-              </div>
             </div>
 
           </div>

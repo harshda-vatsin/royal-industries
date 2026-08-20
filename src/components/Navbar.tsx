@@ -52,13 +52,11 @@ export default function Navbar() {
               <Mail className="w-3.5 h-3.5" />
               <span>office@royaleind.in</span>
             </a>
-            <a href="tel:+911146200000" className="flex items-center space-x-1.5 hover:text-brand-blue transition-colors">
+            <a href="tel:+919899853399" className="flex items-center space-x-1.5 hover:text-brand-blue transition-colors">
               <Phone className="w-3.5 h-3.5" />
-              <span>+91-11-46200000</span>
+              <span>+91 98998 53399</span>
             </a>
-            <span className="hidden md:inline-flex items-center space-x-1.5 bg-brand-blue/20 border border-brand-blue/40 text-white px-2.5 py-1 rounded-sm text-[11px] font-bold uppercase tracking-wider">
-              <span>Authorized Distributor · LyondellBasell</span>
-            </span>
+
           </div>
           <div className="flex items-center space-x-5">
             <div className="flex items-center space-x-3 pr-4">
@@ -91,21 +89,21 @@ export default function Navbar() {
         isScrolled ? 'shadow-md' : ''
       } py-3.5`}>
         <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
+          <div className="flex lg:grid lg:grid-cols-[auto_1fr_auto] justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <Image
                 src="/logo_main.png"
                 alt="Royale Logo"
                 width={240}
-                height={80} 
+                height={80}
                 className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center justify-center">
               <div className="flex space-x-7">
                 {MENU_ITEMS.map((item) => {
                   const isActive = pathname === item.href || (item.subItems && pathname.startsWith(item.href));
@@ -140,12 +138,26 @@ export default function Navbar() {
                   );
                 })}
               </div>
-              <Link
-                href="/#rfq"
-                className="bg-brand-blue hover:bg-brand-blue-dark text-white text-xs font-bold px-5 py-2.5 uppercase tracking-wider transition-colors duration-200 rounded-sm shadow-sm"
-              >
-                Request Quote
-              </Link>
+            </div>
+
+            {/* Desktop LYB Box (Replaced CTA) */}
+            <div className="hidden lg:flex items-center justify-end">
+              <div className="inline-flex items-center border border-gray-200 rounded-sm overflow-hidden bg-gray-50/50 shadow-sm">
+                <div className="bg-white px-3 py-2 flex items-center justify-center h-full border-r border-gray-200">
+                  <Image
+                    src="/images/logo_lyb_small.png"
+                    alt="LyondellBasell"
+                    width={28}
+                    height={28}
+                    unoptimized
+                    className="h-6 w-auto object-contain"
+                  />
+                </div>
+                <div className="flex flex-col px-4 py-1.5 justify-center">
+                  <span className="text-charcoal text-[11px] font-extrabold uppercase tracking-widest leading-tight">LyondellBasell</span>
+                  <span className="text-brand-blue-light text-[10px] font-semibold">Authorized Distributor</span>
+                </div>
+              </div>
             </div>
 
             {/* Mobile Menu Trigger */}

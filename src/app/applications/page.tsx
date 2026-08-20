@@ -27,28 +27,28 @@ export default function ApplicationsPage() {
         {/* Industries Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {industries.map((industry) => (
                 <div
                   key={industry.id}
                   className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
                 >
-                  <div className="p-8 border-b border-gray-100 flex-grow space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 rounded-lg bg-brand-blue-light/10 flex items-center justify-center flex-shrink-0">
-                        <Factory className="w-6 h-6 text-brand-blue-light" />
+                  <div className="p-5 sm:p-6 border-b border-gray-100 flex-grow space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 rounded-lg bg-brand-blue-light/10 flex items-center justify-center flex-shrink-0">
+                        <Factory className="w-5 h-5 text-brand-blue-light" />
                       </div>
-                      <h3 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
+                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-charcoal">
                         {industry.name}
                       </h3>
                     </div>
                     
-                    <p className="text-gray-600 text-base leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {industry.description}
                     </p>
 
                     <div>
-                      <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-brand-blue-light mb-3">
+                      <h4 className="font-heading font-bold text-[10px] sm:text-xs uppercase tracking-widest text-brand-blue-light mb-2">
                         Primary Use Cases
                       </h4>
                       <div className="flex flex-wrap gap-2">
@@ -65,7 +65,7 @@ export default function ApplicationsPage() {
                   </div>
 
                   {/* Actions / Relevant Chemicals preview */}
-                  <div className="bg-gray-50/50 p-6 sm:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-end gap-4">
+                  <div className="bg-gray-50/50 p-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-end gap-4">
                     <Link
                       href={`/applications/${industry.id}`}
                       className="inline-flex items-center space-x-2 text-brand-blue-light font-bold text-sm uppercase tracking-wider hover:text-brand-blue transition-colors group"
